@@ -45,7 +45,7 @@ namespace Plexity
             const string LOG_IDENT = "LaunchSettings";
 
 #if DEBUG
-            App.Logger.WriteLine(LOG_IDENT, $"Launched with arguments: {string.Join(' ', args)}");
+            App.Logger.WriteLine(LogLevel.Info, LOG_IDENT, $"Launched with arguments: {string.Join(' ', args)}");
 #endif
 
             Args = args;
