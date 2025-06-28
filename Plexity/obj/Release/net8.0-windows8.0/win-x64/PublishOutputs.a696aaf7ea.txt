@@ -1,0 +1,3 @@
+C:\Users\koray\source\repos\KloBraticc\publish\Plexity.pdb
+C:\Users\koray\source\repos\KloBraticc\publish\Plexity.dll.config
+C:\Users\koray\source\repos\KloBraticc\publish\Plexity.exe

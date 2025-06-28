@@ -39,7 +39,6 @@ using Plexity.Views.Windows;
 using Wpf.Ui;
 using Wpf.Ui.Appearance;
 using Wpf.Ui.DependencyInjection;
-using IWshRuntimeLibrary;
 using Wpf.Ui.Markup;
 
 namespace Plexity
@@ -250,6 +249,7 @@ namespace Plexity
             }
         }
 
+        // .NET 8 Compatible shortcut creation using PowerShell
         private bool CreateShortcut(string exePath, Environment.SpecialFolder location, string? subDir = null)
         {
             try
@@ -258,13 +258,30 @@ namespace Plexity
                 Directory.CreateDirectory(folderPath);
 
                 string shortcutPath = Path.Combine(folderPath, "Plexity.lnk");
+                string workingDirectory = Path.GetDirectoryName(exePath) ?? "";
 
-                var shell = new IWshRuntimeLibrary.WshShell();
-                var shortcut = (IWshRuntimeLibrary.IWshShortcut)shell.CreateShortcut(shortcutPath);
-                shortcut.TargetPath = exePath;
-                shortcut.WorkingDirectory = Path.GetDirectoryName(exePath);
-                shortcut.IconLocation = exePath + ",0";
-                shortcut.Save();
+                // Use PowerShell to create shortcut (works in .NET 8)
+                string script = $@"
+                    $WshShell = New-Object -comObject WScript.Shell
+                    $Shortcut = $WshShell.CreateShortcut('{shortcutPath}')
+                    $Shortcut.TargetPath = '{exePath}'
+                    $Shortcut.WorkingDirectory = '{workingDirectory}'
+                    $Shortcut.IconLocation = '{exePath},0'
+                    $Shortcut.Save()
+                ";
+
+                var startInfo = new ProcessStartInfo
+                {
+                    FileName = "powershell.exe",
+                    Arguments = $"-Command \"{script}\"",
+                    UseShellExecute = false,
+                    CreateNoWindow = true,
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true
+                };
+
+                using var process = Process.Start(startInfo);
+                process?.WaitForExit();
 
                 return System.IO.File.Exists(shortcutPath);
             }
@@ -328,14 +345,14 @@ namespace Plexity
                 await fastFlagManager.LoadAsync();
 
                 // Apply theme and density settings
-                try 
+                try
                 {
                     if (SystemAccentColorHelper.IsSystemAccentColorEnabled())
                     {
                         bool isDarkMode = SystemAccentColorHelper.IsSystemUsingDarkMode();
                         SystemAccentColorHelper.ApplySystemAccentColor(this, isDarkMode);
                     }
-                    
+
                     UIDensityManager.ApplyDensityMode((UIDensityManager.DensityMode)Settings.Prop.UIDisplayDensity);
                 }
                 catch (Exception ex)
@@ -344,7 +361,7 @@ namespace Plexity
                 }
 
                 await _host.StartAsync();
-                
+
                 // Enhanced memory optimization
                 await MemoryManager.OptimizeMemoryAsync();
 

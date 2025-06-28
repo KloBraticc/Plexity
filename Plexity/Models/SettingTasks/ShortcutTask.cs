@@ -1,6 +1,6 @@
 ﻿using System.IO;
+using System.Diagnostics;
 using Plexity.Models.SettingTasks.Base;
-using IWshRuntimeLibrary;
 
 namespace Plexity.Models.SettingTasks
 {
@@ -26,13 +26,30 @@ namespace Plexity.Models.SettingTasks
                 System.IO.File.Delete(_shortcutPath);
             }
 
-            // Create shortcut
-            var shell = new WshShell();
-            IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(_shortcutPath);
-            shortcut.TargetPath = _targetPath;
-            shortcut.Arguments = _exeFlags;
-            shortcut.WorkingDirectory = Path.GetDirectoryName(_targetPath);
-            shortcut.Save();
+            // Create shortcut using PowerShell (compatible with .NET 8)
+            var workingDirectory = Path.GetDirectoryName(_targetPath) ?? "";
+            var script = $@"
+                $WshShell = New-Object -comObject WScript.Shell
+                $Shortcut = $WshShell.CreateShortcut('{_shortcutPath}')
+                $Shortcut.TargetPath = '{_targetPath}'
+                $Shortcut.Arguments = '{_exeFlags}'
+                $Shortcut.WorkingDirectory = '{workingDirectory}'
+                $Shortcut.IconLocation = '{_targetPath},0'
+                $Shortcut.Save()
+            ";
+
+            var startInfo = new ProcessStartInfo
+            {
+                FileName = "powershell.exe",
+                Arguments = $"-Command \"{script}\"",
+                UseShellExecute = false,
+                CreateNoWindow = true,
+                RedirectStandardOutput = true,
+                RedirectStandardError = true
+            };
+
+            using var process = Process.Start(startInfo);
+            process?.WaitForExit();
         }
     }
 }
