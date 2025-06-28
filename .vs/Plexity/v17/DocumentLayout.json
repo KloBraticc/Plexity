@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\koray\\source\\repos\\KloBraticc\\Plexity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{26062A7F-393A-4BBB-A9B0-EFD77040C17A}|Plexity\\Plexity.csproj|c:\\users\\koray\\source\\repos\\klobraticc\\plexity\\plexity\\helpers\\memorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26062A7F-393A-4BBB-A9B0-EFD77040C17A}|Plexity\\Plexity.csproj|solutionrelative:plexity\\helpers\\memorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26062A7F-393A-4BBB-A9B0-EFD77040C17A}|Plexity\\Plexity.csproj|c:\\users\\koray\\source\\repos\\klobraticc\\plexity\\plexity\\views\\pages\\fastflageditor.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26062A7F-393A-4BBB-A9B0-EFD77040C17A}|Plexity\\Plexity.csproj|solutionrelative:plexity\\views\\pages\\fastflageditor.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\koray\\source\\repos\\KloBraticc\\Plexity\\App.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:App.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26062A7F-393A-4BBB-A9B0-EFD77040C17A}|Plexity\\Plexity.csproj|c:\\users\\koray\\source\\repos\\klobraticc\\plexity\\plexity\\views\\pages\\fastflageditor.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{26062A7F-393A-4BBB-A9B0-EFD77040C17A}|Plexity\\Plexity.csproj|solutionrelative:plexity\\views\\pages\\fastflageditor.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26062A7F-393A-4BBB-A9B0-EFD77040C17A}|Plexity\\Plexity.csproj|c:\\users\\koray\\source\\repos\\klobraticc\\plexity\\plexity\\helpers\\memorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26062A7F-393A-4BBB-A9B0-EFD77040C17A}|Plexity\\Plexity.csproj|solutionrelative:plexity\\helpers\\memorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{26062A7F-393A-4BBB-A9B0-EFD77040C17A}|Plexity\\Plexity.csproj|c:\\users\\koray\\source\\repos\\klobraticc\\plexity\\plexity\\resources\\styles\\modernstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -38,8 +46,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FastFlagEditor.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\koray\\source\\repos\\KloBraticc\\Plexity\\Plexity\\Views\\Pages\\FastFlagEditor.xaml.cs",
+              "RelativeDocumentMoniker": "Plexity\\Views\\Pages\\FastFlagEditor.xaml.cs",
+              "ToolTip": "C:\\Users\\koray\\source\\repos\\KloBraticc\\Plexity\\Plexity\\Views\\Pages\\FastFlagEditor.xaml.cs",
+              "RelativeToolTip": "Plexity\\Views\\Pages\\FastFlagEditor.xaml.cs",
+              "ViewState": "AgIAAGQCAAAAAAAAAAAIwB4AAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T18:21:48.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FastFlagEditor.xaml",
+              "DocumentMoniker": "C:\\Users\\koray\\source\\repos\\KloBraticc\\Plexity\\Plexity\\Views\\Pages\\FastFlagEditor.xaml",
+              "RelativeDocumentMoniker": "Plexity\\Views\\Pages\\FastFlagEditor.xaml",
+              "ToolTip": "C:\\Users\\koray\\source\\repos\\KloBraticc\\Plexity\\Plexity\\Views\\Pages\\FastFlagEditor.xaml",
+              "RelativeToolTip": "Plexity\\Views\\Pages\\FastFlagEditor.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-28T18:19:13.105Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -48,14 +81,14 @@
               "RelativeDocumentMoniker": "App.xaml.cs",
               "ToolTip": "C:\\Users\\koray\\source\\repos\\KloBraticc\\Plexity\\App.xaml.cs",
               "RelativeToolTip": "App.xaml.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAiwEIAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAswEIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-28T15:32:43.226Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ModernStyles.xaml",
               "DocumentMoniker": "C:\\Users\\koray\\source\\repos\\KloBraticc\\Plexity\\Plexity\\Resources\\Styles\\ModernStyles.xaml",
               "RelativeDocumentMoniker": "Plexity\\Resources\\Styles\\ModernStyles.xaml",
@@ -67,7 +100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\koray\\source\\repos\\KloBraticc\\Plexity\\Plexity\\App.xaml.cs",
               "RelativeDocumentMoniker": "Plexity\\App.xaml.cs",
@@ -75,25 +108,24 @@
               "RelativeToolTip": "Plexity\\App.xaml.cs",
               "ViewState": "AgIAADYBAAAAAAAAAAAjwEIBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T15:16:27.389Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T15:16:27.389Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "MemoryManager.cs",
               "DocumentMoniker": "C:\\Users\\koray\\source\\repos\\KloBraticc\\Plexity\\Plexity\\Helpers\\MemoryManager.cs",
               "RelativeDocumentMoniker": "Plexity\\Helpers\\MemoryManager.cs",
               "ToolTip": "C:\\Users\\koray\\source\\repos\\KloBraticc\\Plexity\\Plexity\\Helpers\\MemoryManager.cs",
               "RelativeToolTip": "Plexity\\Helpers\\MemoryManager.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAtwCkAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAWwCkAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-28T15:10:47.225Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ThreadSafeSettingsManager.cs",
               "DocumentMoniker": "C:\\Users\\koray\\source\\repos\\KloBraticc\\Plexity\\Plexity\\Services\\ThreadSafeSettingsManager.cs",
               "RelativeDocumentMoniker": "Plexity\\Services\\ThreadSafeSettingsManager.cs",
@@ -101,12 +133,11 @@
               "RelativeToolTip": "Plexity\\Services\\ThreadSafeSettingsManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAIwG8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T15:25:05.719Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T15:25:05.719Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ThemeHelper.cs",
               "DocumentMoniker": "C:\\Users\\koray\\source\\repos\\KloBraticc\\Plexity\\Plexity\\Helpers\\ThemeHelper.cs",
               "RelativeDocumentMoniker": "Plexity\\Helpers\\ThemeHelper.cs",
@@ -114,20 +145,18 @@
               "RelativeToolTip": "Plexity\\Helpers\\ThemeHelper.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAkwCYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T14:46:12.546Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T14:46:12.546Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "SettingsPage.xaml",
               "DocumentMoniker": "C:\\Users\\koray\\source\\repos\\KloBraticc\\Plexity\\Plexity\\Views\\Pages\\SettingsPage.xaml",
               "RelativeDocumentMoniker": "Plexity\\Views\\Pages\\SettingsPage.xaml",
               "ToolTip": "C:\\Users\\koray\\source\\repos\\KloBraticc\\Plexity\\Plexity\\Views\\Pages\\SettingsPage.xaml",
               "RelativeToolTip": "Plexity\\Views\\Pages\\SettingsPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-28T14:44:08.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T14:44:08.505Z"
             }
           ]
         }
