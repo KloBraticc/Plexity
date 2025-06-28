@@ -8267,31 +8267,29 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hiile\\.nuget\\packages\\": {},
+    "C:\\Users\\koray\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hiile\\source\\repos\\Plexity\\Plexity\\Plexity.csproj",
+      "projectUniqueName": "C:\\Users\\koray\\source\\repos\\KloBraticc\\Plexity\\Plexity\\Plexity.csproj",
       "projectName": "Plexity",
-      "projectPath": "C:\\Users\\Hiile\\source\\repos\\Plexity\\Plexity\\Plexity.csproj",
-      "packagesPath": "C:\\Users\\Hiile\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hiile\\source\\repos\\Plexity\\Plexity\\obj\\",
+      "projectPath": "C:\\Users\\koray\\source\\repos\\KloBraticc\\Plexity\\Plexity\\Plexity.csproj",
+      "packagesPath": "C:\\Users\\koray\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\koray\\source\\repos\\KloBraticc\\Plexity\\Plexity\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Hiile\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\koray\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
       ],
       "originalTargetFrameworks": [
         "net8.0-windows8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -8393,28 +8391,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.16, 8.0.16]"
-          },
-          {
-            "name": "Microsoft.Net.Sdk.Compilers.Toolset",
-            "version": "[9.0.300, 9.0.300]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[8.0.16, 8.0.16]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.16, 8.0.16]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.16, 8.0.16]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -8423,7 +8399,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   },

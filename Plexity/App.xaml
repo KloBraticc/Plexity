@@ -12,15 +12,29 @@
             <ResourceDictionary.MergedDictionaries>
                 <ui:ThemesDictionary Theme="Dark" />
                 <ui:ControlsDictionary />
-                <!--  Add this line to include the default density  -->
+
+                <!--  High contrast colors  -->
+                <ResourceDictionary Source="/Resources/Styles/HighContrastColors.xaml" />
+
+                <!--  Modern styles  -->
+                <ResourceDictionary Source="/Resources/Styles/ModernStyles.xaml" />
+
+                <!--  Density settings  -->
                 <ResourceDictionary Source="/Resources/Density/RegularDensity.xaml" />
 
-                <!--  Your modern icons resource dictionary  -->
+                <!--  Modern icons  -->
                 <ResourceDictionary Source="/Resources/ModernIcons.xaml" />
-
-                <!--  Other resource dictionaries  -->
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
 
+            <!--  Application-wide font settings for high DPI  -->
+            <Style x:Key="HighDpiOptimized" TargetType="{x:Type FrameworkElement}">
+                <Setter Property="UseLayoutRounding" Value="True" />
+                <Setter Property="SnapsToDevicePixels" Value="True" />
+                <Setter Property="RenderOptions.ClearTypeHint" Value="Enabled" />
+                <Setter Property="TextOptions.TextRenderingMode" Value="ClearType" />
+                <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
+            </Style>
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

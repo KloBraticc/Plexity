@@ -15,10 +15,12 @@ using System.Windows.Media;
 using System.Collections.ObjectModel;
 using System.Runtime.CompilerServices;
 using Plexity.Helpers;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Plexity.Views.Windows
 {
-    public partial class MainWindow : INavigationWindow
+    public partial class MainWindow : INavigationWindow, INotifyPropertyChanged
     {
         private readonly MainWindowViewModel _viewModel = new();
         public MainWindowViewModel ViewModel { get; }
@@ -94,7 +96,6 @@ namespace Plexity.Views.Windows
             App.State.Save();
         }
 
-
         public void SetPaneDisplayMode(string mode)
         {
             NavigationViewPaneDisplayMode displayMode;
@@ -124,11 +125,6 @@ namespace Plexity.Views.Windows
             RootNavigation.Dispatcher.Invoke(() => { }, System.Windows.Threading.DispatcherPriority.Render);
             RootNavigation.Visibility = Visibility.Visible;
         }
-
-
-
-
-
 
         private void InitializeWindowState()
         {
@@ -169,7 +165,6 @@ namespace Plexity.Views.Windows
         {
             CloseWindow();
         }
-
 
         private CancellationTokenSource? _notificationCts;
 
@@ -246,11 +241,11 @@ namespace Plexity.Views.Windows
             NotificationScale.BeginAnimation(ScaleTransform.ScaleYProperty, scaleOut);
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        // Fixed: Removed async as it's not needed
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-
                 _navigationService.Navigate(typeof(LaunchPage));
                 ShowNotification("Plexity Saved and Launched Roblox!");
                 ViewModel.Save();
@@ -267,5 +262,91 @@ namespace Plexity.Views.Windows
             ShowNotification("Plexity Settings Saved!");
             ViewModel.Save();
         }
+
+        #region Commands for StatusBar Buttons
+
+        public ICommand SaveAndLaunchSettingsCommand => new RelayCommand(SaveAndLaunchSettings);
+        public ICommand SaveSettingsCommand => new RelayCommand(SaveSettings);
+        public ICommand CloseWindowCommand => new RelayCommand(CloseApplication);
+
+        private void SaveAndLaunchSettings()
+        {
+            try
+            {
+                ViewModel.SaveAndLaunchSettings();
+                ShowNotification("Settings saved and launching...");
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage($"Failed to save and launch: {ex.Message}");
+            }
+        }
+
+        private void SaveSettings()
+        {
+            try
+            {
+                ViewModel.Save();
+                ShowNotification("Settings saved successfully!");
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage($"Failed to save settings: {ex.Message}");
+            }
+        }
+
+        private void CloseApplication()
+        {
+            Close();
+        }
+
+        #endregion
+
+        #region Notification System
+
+        private void ShowErrorMessage(string message)
+        {
+            // Fixed: Use fully qualified names to resolve ambiguity
+            System.Windows.MessageBox.Show(message, "Error", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Error);
+        }
+
+        #endregion
+
+        #region INotifyPropertyChanged
+
+        // Fixed: Made nullable to match interface
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        #endregion
+    }
+
+    public class RelayCommand : ICommand
+    {
+        private readonly Action _execute;
+        private readonly Func<bool>? _canExecute;
+
+        public RelayCommand(Action execute, Func<bool>? canExecute = null)
+        {
+            _execute = execute ?? throw new ArgumentNullException(nameof(execute));
+            _canExecute = canExecute;
+        }
+
+        // Fixed: Made nullable to match interface
+        public event EventHandler? CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+
+        // Fixed: Made parameter nullable to match interface
+        public bool CanExecute(object? parameter) => _canExecute == null || _canExecute();
+
+        // Fixed: Made parameter nullable to match interface
+        public void Execute(object? parameter) => _execute();
     }
 }

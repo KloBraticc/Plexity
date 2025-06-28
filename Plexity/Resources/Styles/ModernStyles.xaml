@@ -1,0 +1,447 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml">
+
+    <!--  Windows 11 Button Style with Improved Contrast  -->
+    <Style x:Key="Windows11ButtonStyle" TargetType="ui:Button">
+        <Setter Property="FontFamily" Value="Segoe UI Variable Display" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Padding" Value="16,10" />
+        <Setter Property="Margin" Value="4" />
+        <Setter Property="MinHeight" Value="36" />
+        <Setter Property="MinWidth" Value="120" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="RenderOptions.ClearTypeHint" Value="Enabled" />
+        <Setter Property="TextOptions.TextRenderingMode" Value="ClearType" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ui:Button">
+                    <Border
+                        x:Name="BorderElement"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="4"
+                        SnapsToDevicePixels="True"
+                        UseLayoutRounding="True">
+                        <ContentPresenter
+                            x:Name="ContentPresenter"
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            SnapsToDevicePixels="True"
+                            UseLayoutRounding="True" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="BorderElement" Property="Background" Value="#FFE3A7C7" />
+                            <Setter TargetName="BorderElement" Property="BorderBrush" Value="#FFDD88B5" />
+                            <Setter Property="Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect
+                                        BlurRadius="8"
+                                        Opacity="0.3"
+                                        ShadowDepth="2"
+                                        Color="#DD88B5" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="BorderElement" Property="Background" Value="#FFD088B5" />
+                            <Setter TargetName="BorderElement" Property="BorderBrush" Value="#FFC76FA5" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="BorderElement" Property="Background" Value="#FF2D2D30" />
+                            <Setter TargetName="BorderElement" Property="BorderBrush" Value="#FF404040" />
+                            <Setter Property="Foreground" Value="#FF666666" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--  Primary Button Style (Pink Pastel Theme)  -->
+    <Style
+        x:Key="PrimaryButtonStyle"
+        BasedOn="{StaticResource Windows11ButtonStyle}"
+        TargetType="ui:Button">
+        <Setter Property="Background" Value="#FFEDD1DC" />
+        <Setter Property="BorderBrush" Value="#FFD4A5B5" />
+        <Setter Property="Foreground" Value="#FF2D1B2A" />
+    </Style>
+
+    <!--  Secondary Button Style  -->
+    <Style
+        x:Key="SecondaryButtonStyle"
+        BasedOn="{StaticResource Windows11ButtonStyle}"
+        TargetType="ui:Button">
+        <Setter Property="Background" Value="#FF3A3A3C" />
+        <Setter Property="BorderBrush" Value="#FF5C5C5F" />
+        <Setter Property="Foreground" Value="#FFEDD1DC" />
+    </Style>
+
+    <!--  Modern Card Style  -->
+    <Style x:Key="ModernCardStyle" TargetType="ui:Card">
+        <Setter Property="Background" Value="#FF2D2D30" />
+        <Setter Property="BorderBrush" Value="#FF404040" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="16" />
+        <Setter Property="Margin" Value="0,0,0,12" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect
+                    BlurRadius="12"
+                    Opacity="0.1"
+                    ShadowDepth="2"
+                    Color="Black" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--  Modern Card Border Style for Settings  -->
+    <Style x:Key="ModernCardBorderStyle" TargetType="Border">
+        <Setter Property="Background" Value="#FF2D2D30" />
+        <Setter Property="BorderBrush" Value="#FF404040" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="8" />
+        <Setter Property="Padding" Value="24" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect
+                    BlurRadius="12"
+                    Opacity="0.1"
+                    ShadowDepth="2"
+                    Color="Black" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--  Compact Card Style  -->
+    <Style x:Key="CompactCardStyle" TargetType="Border">
+        <Setter Property="Background" Value="{DynamicResource BackgroundSecondaryBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderSecondaryBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="6" />
+        <Setter Property="Padding" Value="16,12" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+    </Style>
+
+    <!--  Compact Header Text Style  -->
+    <Style x:Key="CompactHeaderStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Segoe UI Variable Display" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+    </Style>
+
+    <!--  Compact Description Text Style  -->
+    <Style x:Key="CompactDescriptionStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Segoe UI Variable Display" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="Foreground" Value="{DynamicResource TextTertiaryBrush}" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+    </Style>
+
+    <!--  High DPI Text Block Style  -->
+    <Style x:Key="ModernTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Segoe UI Variable Display" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="RenderOptions.ClearTypeHint" Value="Enabled" />
+        <Setter Property="TextOptions.TextRenderingMode" Value="ClearType" />
+        <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
+    </Style>
+
+    <!--  Header Text Style  -->
+    <Style
+        x:Key="HeaderTextStyle"
+        BasedOn="{StaticResource ModernTextBlockStyle}"
+        TargetType="TextBlock">
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Foreground" Value="#FFEDD1DC" />
+        <Setter Property="Margin" Value="0,0,0,16" />
+    </Style>
+
+    <!--  Subheader Text Style  -->
+    <Style
+        x:Key="SubheaderTextStyle"
+        BasedOn="{StaticResource ModernTextBlockStyle}"
+        TargetType="TextBlock">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="Foreground" Value="#FFE8E8E8" />
+        <Setter Property="Margin" Value="0,0,0,8" />
+    </Style>
+
+    <!--  Body Text Style  -->
+    <Style
+        x:Key="BodyTextStyle"
+        BasedOn="{StaticResource ModernTextBlockStyle}"
+        TargetType="TextBlock">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="Foreground" Value="#FFC8C8C8" />
+        <Setter Property="LineHeight" Value="20" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+
+    <!--  Muted Text Style  -->
+    <Style
+        x:Key="MutedTextStyle"
+        BasedOn="{StaticResource ModernTextBlockStyle}"
+        TargetType="TextBlock">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="Foreground" Value="#FF9E9E9E" />
+        <Setter Property="Margin" Value="0,4,0,10" />
+    </Style>
+
+    <!--  Improved Modern ComboBox Style - No Event Handlers  -->
+    <Style x:Key="ModernComboBoxStyle" TargetType="ComboBox">
+        <Setter Property="FontFamily" Value="Segoe UI Variable Display" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Padding" Value="16,12" />
+        <Setter Property="MinHeight" Value="44" />
+        <Setter Property="Background" Value="#FF3A3A3C" />
+        <Setter Property="BorderBrush" Value="#FF5C5C5F" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Foreground" Value="#FFE8E8E8" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ComboBox">
+                    <Grid>
+                        <Border
+                            x:Name="Border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="6" />
+
+                        <!--  Dropdown Toggle Button - Covers entire area  -->
+                        <ToggleButton
+                            x:Name="ToggleButton"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            ClickMode="Press"
+                            Focusable="False"
+                            IsChecked="{Binding Path=IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                            IsTabStop="False">
+                            <ToggleButton.Template>
+                                <ControlTemplate TargetType="ToggleButton">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="40" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Border Grid.ColumnSpan="2" Background="Transparent" />
+
+                                        <!--  Content Area  -->
+                                        <ContentPresenter
+                                            Grid.Column="0"
+                                            Margin="16,12,8,12"
+                                            HorizontalAlignment="Left"
+                                            VerticalAlignment="Center"
+                                            Content="{Binding SelectionBoxItem, RelativeSource={RelativeSource AncestorType=ComboBox}}"
+                                            ContentTemplate="{Binding SelectionBoxItemTemplate, RelativeSource={RelativeSource AncestorType=ComboBox}}"
+                                            ContentTemplateSelector="{Binding ItemTemplateSelector, RelativeSource={RelativeSource AncestorType=ComboBox}}"
+                                            IsHitTestVisible="False" />
+
+                                        <!--  Arrow  -->
+                                        <Path
+                                            x:Name="Arrow"
+                                            Grid.Column="1"
+                                            Width="12"
+                                            Height="8"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            Data="M 0 0 L 6 6 L 12 0 Z"
+                                            Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ComboBox}}"
+                                            Stretch="Uniform" />
+                                    </Grid>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="Arrow" Property="Fill" Value="#FFEDD1DC" />
+                                        </Trigger>
+                                        <Trigger Property="IsChecked" Value="True">
+                                            <Setter TargetName="Arrow" Property="Data" Value="M 0 6 L 6 0 L 12 6 Z" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </ToggleButton.Template>
+                        </ToggleButton>
+
+                        <!--  Popup  -->
+                        <Popup
+                            x:Name="Popup"
+                            AllowsTransparency="True"
+                            Focusable="False"
+                            IsOpen="{TemplateBinding IsDropDownOpen}"
+                            Placement="Bottom"
+                            PopupAnimation="Slide">
+                            <Grid
+                                x:Name="DropDown"
+                                MinWidth="{TemplateBinding ActualWidth}"
+                                MaxHeight="{TemplateBinding MaxDropDownHeight}"
+                                SnapsToDevicePixels="True">
+                                <Border
+                                    x:Name="DropDownBorder"
+                                    Background="#FF3A3A3C"
+                                    BorderBrush="#FFEDD1DC"
+                                    BorderThickness="1"
+                                    CornerRadius="6">
+                                    <Border.Effect>
+                                        <DropShadowEffect
+                                            BlurRadius="15"
+                                            Opacity="0.4"
+                                            ShadowDepth="3"
+                                            Color="#DD88B5" />
+                                    </Border.Effect>
+                                </Border>
+                                <ScrollViewer
+                                    Margin="2"
+                                    HorizontalScrollBarVisibility="Disabled"
+                                    SnapsToDevicePixels="True"
+                                    VerticalScrollBarVisibility="Auto">
+                                    <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
+                                </ScrollViewer>
+                            </Grid>
+                        </Popup>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="BorderBrush" Value="#FFEDD1DC" />
+                            <Setter TargetName="Border" Property="Background" Value="#FF444447" />
+                        </Trigger>
+                        <Trigger Property="IsDropDownOpen" Value="True">
+                            <Setter TargetName="Border" Property="BorderBrush" Value="#FFEDD1DC" />
+                        </Trigger>
+                        <Trigger Property="HasItems" Value="false">
+                            <Setter TargetName="DropDownBorder" Property="MinHeight" Value="95" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="#FF666666" />
+                            <Setter TargetName="Border" Property="Background" Value="#FF2D2D30" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--  ComboBox Item Style  -->
+    <Style TargetType="ComboBoxItem">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="Foreground" Value="#FFE8E8E8" />
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="IsHitTestVisible" Value="True" />
+        <Setter Property="Focusable" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ComboBoxItem">
+                    <Border
+                        x:Name="Border"
+                        Padding="12,8"
+                        Background="Transparent"
+                        IsHitTestVisible="True"
+                        SnapsToDevicePixels="true">
+                        <ContentPresenter />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsHighlighted" Value="true">
+                            <Setter TargetName="Border" Property="Background" Value="#FFEDD1DC" />
+                            <Setter Property="Foreground" Value="#FF2D1B2A" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="Border" Property="Background" Value="#FFEDD1DC" />
+                            <Setter Property="Foreground" Value="#FF2D1B2A" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--  ComboBox Toggle Button Template  -->
+    <ControlTemplate x:Key="ComboBoxToggleButton" TargetType="ToggleButton">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="20" />
+            </Grid.ColumnDefinitions>
+            <Border
+                x:Name="Border"
+                Grid.ColumnSpan="2"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                BorderThickness="0"
+                CornerRadius="4" />
+            <Path
+                x:Name="Arrow"
+                Grid.Column="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Data="M 0 0 L 4 4 L 8 0 Z"
+                Fill="#FFE8E8E8" />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="ToggleButton.IsMouseOver" Value="true">
+                <Setter TargetName="Arrow" Property="Fill" Value="#FFEDD1DC" />
+            </Trigger>
+            <Trigger Property="ToggleButton.IsChecked" Value="true">
+                <Setter TargetName="Arrow" Property="Fill" Value="#FFEDD1DC" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!--  ComboBox TextBox Template  -->
+    <ControlTemplate x:Key="ComboBoxTextBox" TargetType="TextBox">
+        <Border
+            x:Name="PART_ContentHost"
+            Background="{TemplateBinding Background}"
+            Focusable="False" />
+    </ControlTemplate>
+
+    <!--  Modern TextBox Style  -->
+    <Style x:Key="ModernTextBoxStyle" TargetType="ui:TextBox">
+        <Setter Property="FontFamily" Value="Segoe UI Variable Display" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Padding" Value="12,8" />
+        <Setter Property="MinHeight" Value="36" />
+        <Setter Property="Background" Value="#FF3A3A3C" />
+        <Setter Property="BorderBrush" Value="#FF5C5C5F" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Foreground" Value="#FFE8E8E8" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="RenderOptions.ClearTypeHint" Value="Enabled" />
+        <Setter Property="TextOptions.TextRenderingMode" Value="ClearType" />
+    </Style>
+
+    <!--  Toggle Switch Style  -->
+    <Style x:Key="ModernToggleSwitchStyle" TargetType="ui:ToggleSwitch">
+        <Setter Property="Foreground" Value="#FFE8E8E8" />
+        <Setter Property="FontFamily" Value="Segoe UI Variable Display" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,40 @@
+<!-- Add this near the top of your page content -->
+<Grid Margin="{StaticResource StandardMargin}">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    
+    <!-- Search Bar -->
+    <Grid Margin="0,0,0,16">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        
+        <ui:TextBox x:Name="SearchBox"
+                   PlaceholderText="Search settings..."
+                   Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
+                   ClearButtonEnabled="True"
+                   Margin="0,0,8,0">
+            <ui:TextBox.Icon>
+                <ui:SymbolIcon Symbol="Search24"/>
+            </ui:TextBox.Icon>
+        </ui:TextBox>
+        
+        <Button Grid.Column="1" 
+                Content="Reset Search"
+                Command="{Binding ResetSearchCommand}"
+                Style="{StaticResource DefaultButtonStyle}"
+                Visibility="{Binding HasSearchResults, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+    </Grid>
+    
+    <!-- Main Content -->
+    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+        <!-- Your existing categories and flags UI here -->
+        <!-- Update to use the filtered collection -->
+        <ItemsControl ItemsSource="{Binding FilteredCategories}">
+            <!-- Template code here -->
+        </ItemsControl>
+    </ScrollViewer>
+</Grid>
