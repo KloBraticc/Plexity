@@ -86,5 +86,23 @@ namespace Plexity.Models.Persistable
         public ChannelChangeMode ChannelChangeMode { get; set; } = ChannelChangeMode.Automatic;
         public string ChannelHash { get; set; } = "";
 
+        public bool UseModernWindowStyling { get; set; } = true;
+
+        public bool UseSystemAccentColor { get; set; } = true;
+
+        public bool UseModernIcons { get; set; } = true;
+
+        public bool UseDynamicTheme { get; set; } = true;
+
+        public UIDensity UIDisplayDensity { get; set; } = UIDensity.Regular;
+
+    }
+
+    // Add enum
+    public enum UIDensity
+    {
+        Compact,
+        Regular,
+        Expanded
     }
 }

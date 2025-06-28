@@ -32,6 +32,8 @@ namespace Plexity.ViewModels.Windows
         public MainWindowViewModel()
         {
             _originalInstallLocation = installer.InstallLocation;
+
+            UpdateIconsToModern();
         }
 
         // Observable properties
@@ -218,6 +220,79 @@ namespace Plexity.ViewModels.Windows
 
             // Launch the Roblox client
             LaunchHandler.LaunchRoblox(LaunchMode.Player);
+        }
+
+        // Add a method to update icons based on settings
+        private void UpdateIconsToModern()
+        {
+            if (!App.Settings.Prop.UseModernIcons)
+                return;
+                
+            try
+            {
+                // Update menu items with modern icons
+                foreach (var item in MenuItems)
+                {
+                    object? iconResource = null;
+                    switch (item.Content.ToString())
+                    {
+                        case "Home":
+                            iconResource = Application.Current.Resources["ModernHomeIcon"];
+                            break;
+                        case "Deploy":
+                            iconResource = Application.Current.Resources["ModernDeployIcon"];
+                            break;
+                        case "Mods":
+                            iconResource = Application.Current.Resources["ModernModsIcon"];
+                            break;
+                        case "Editor":
+                            iconResource = Application.Current.Resources["ModernEditorIcon"];
+                            break;
+                        case "FFlags":
+                            iconResource = Application.Current.Resources["ModernFlagsIcon"];
+                            break;
+                        case "Files":
+                            iconResource = Application.Current.Resources["ModernFilesIcon"];
+                            break;
+                        case "Plugins":
+                            iconResource = Application.Current.Resources["ModernPluginsIcon"];
+                            break;
+                        case "Tweaks":
+                            iconResource = Application.Current.Resources["ModernTweaksIcon"];
+                            break;
+                    }
+                    
+                    if (iconResource is SymbolIcon symbolIcon)
+                    {
+                        item.Icon = symbolIcon;
+                    }
+                }
+                
+                // Update footer items with modern icons
+                foreach (var item in FooterMenuItems)
+                {
+                    object? iconResource = null;
+                    switch (item.Content.ToString())
+                    {
+                        case "Settings":
+                            iconResource = Application.Current.Resources["ModernSettingsIcon"];
+                            break;
+                        case "About":
+                            iconResource = Application.Current.Resources["ModernAboutIcon"];
+                            break;
+                    }
+                    
+                    if (iconResource is SymbolIcon symbolIcon)
+                    {
+                        item.Icon = symbolIcon;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Log the error but don't crash the application
+                System.Diagnostics.Debug.WriteLine($"Failed to update icons: {ex.Message}");
+            }
         }
     }
 }

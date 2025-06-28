@@ -14,6 +14,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media;
 using System.Collections.ObjectModel;
 using System.Runtime.CompilerServices;
+using Plexity.Helpers;
 
 namespace Plexity.Views.Windows
 {
@@ -45,6 +46,11 @@ namespace Plexity.Views.Windows
             InitializeWindowState();
             SetPageService(navigationViewPageProvider);
             _navigationService.SetNavigationControl(RootNavigation);
+
+            if (App.Settings.Prop.UseModernWindowStyling)
+            {
+                WindowsVersionHelper.ApplyRoundedCorners(this);
+            }
         }
 
         #region INavigationWindow implementation

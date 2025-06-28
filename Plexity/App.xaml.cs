@@ -21,6 +21,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Win32;
 using Plexity.Enums;
+using Plexity.Helpers;
 using Plexity.Models;
 using Plexity.Models.APIs.GitHub;
 using Plexity.Models.Persistable;
@@ -40,8 +41,6 @@ using Wpf.Ui.Appearance;
 using Wpf.Ui.DependencyInjection;
 using IWshRuntimeLibrary;
 using Wpf.Ui.Markup;
-
-
 
 namespace Plexity
 {
@@ -304,9 +303,38 @@ namespace Plexity
             DialogService.ShowMessage(message, "Success", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
-
-        private async void OnStartup(object sender, StartupEventArgs e)
+        protected override async void OnStartup(StartupEventArgs e)
         {
+            // Initialize Paths first
+            string baseDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Plexity");
+            Paths.Initialize(baseDirectory);
+
+            // Load settings with error handling
+            try 
+            {
+                Settings.Load();
+            } 
+            catch (Exception ex) 
+            {
+                MessageBox.Show($"Failed to load settings: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                // Continue with default settings
+            }
+
+            // Apply theme and density settings
+            try 
+            {
+                if (SystemAccentColorHelper.IsSystemAccentColorEnabled())
+                {
+                    SystemAccentColorHelper.ApplySystemAccentColor(this);
+                }
+                
+                UIDensityManager.ApplyDensityMode((UIDensityManager.DensityMode)Settings.Prop.UIDisplayDensity);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to apply theme settings: {ex.Message}", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+
             const string LOG_IDENT = "App::OnStartup";
 
             try
@@ -315,6 +343,7 @@ namespace Plexity
                 GC.Collect();
                 GC.WaitForPendingFinalizers();
                 GC.Collect();
+                
                 try
                 {
                     using var process = Process.GetCurrentProcess();
@@ -342,7 +371,6 @@ namespace Plexity
                 string newVersion = Version;
 
                 InstallAppAndCreateShortcut(currentAppFolder, newVersion);
-
 
                 int renderTier = (RenderCapability.Tier >> 16);
                 if (renderTier < 2)
@@ -436,7 +464,11 @@ namespace Plexity
                     return;
                 }
 
-                Paths.Initialize(installLocation);
+                // Re-initialize paths with correct location
+                if (installLocation != baseDirectory)
+                {
+                    Paths.Initialize(installLocation);
+                }
 
                 if (Paths.Process != Paths.Application && !System.IO.File.Exists(Paths.Application))
                 {
@@ -462,6 +494,9 @@ namespace Plexity
 
                 WindowsRegistry.RegisterApis();
                 LaunchHandler.ProcessLaunchArgs();
+
+                // Call base OnStartup to continue normal application startup
+                base.OnStartup(e);
             }
             catch (Exception ex)
             {
@@ -475,15 +510,11 @@ namespace Plexity
         [return: MarshalAs(UnmanagedType.Bool)]
         static extern bool SetProcessWorkingSetSize(IntPtr process, int minimumWorkingSetSize, int maximumWorkingSetSize);
 
-
-
         private async void OnExit(object sender, ExitEventArgs e)
         {
             await _host.StopAsync();
             _host.Dispose();
         }
-
-
 
         public static void SoftTerminate(ErrorCode exitCode = ErrorCode.ERROR_SUCCESS)
         {
@@ -547,7 +578,6 @@ namespace Plexity
                 e.Handled = true;
             }
         }
-
 
         internal static void FinalizeExceptionHandling(Exception ex)
         {

@@ -95,23 +95,17 @@ namespace Plexity
             { "Graphic.GraySky", "FFlagDebugSkyGray" },
             { "Graphic.WhiteSky", "FFlagSkyUseRGBEEncoding" },
 
-
             // Fake Verify Icon!
             { "Fake.Verify", "FStringWhitelistVerifiedUserId" },
 
             { "Camera.Controls", "FFlagNewCameraControls" },
-
-
             { "Camera.Chat", "FFlagDebugForceChatDisabled" },
-
-
 
             // Pseudolocalization
             { "UI.Pseudolocalization", "FFlagDebugEnablePseudolocalization" },
 
             { "Rendering.Shaders", "DFIntRenderClampRoughnessMax" },
             { "Rendering.Shaders2", "DFIntDebugFRMQualityLevelOverride" },
-
             
             // Disable Ads
             { "UI.DisableAds1", "FFlagAdServiceEnabled" },
@@ -185,6 +179,7 @@ namespace Plexity
             { "Rendering.Dynamic.Resolution","DFIntDebugDynamicRenderKiloPixels"},
 
             // Rendering engines
+            { "Rendering.Mode.Default", "FFlagDebugGraphicsPreferDefault" },
             { "Rendering.Mode.DisableD3D11", "FFlagDebugGraphicsDisableDirect3D11" },
             { "Rendering.Mode.D3D11", "FFlagDebugGraphicsPreferD3D11" },
             { "Rendering.Mode.Metal", "FFlagDebugGraphicsPreferMetal" },

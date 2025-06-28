@@ -9,6 +9,7 @@ using Wpf.Ui.Appearance;
 using Wpf.Ui.Abstractions.Controls;
 using Plexity.Views.Windows;
 using System.Diagnostics;
+using Plexity.Models.Persistable;
 
 namespace Plexity.ViewModels.Pages
 {
@@ -23,13 +24,12 @@ namespace Plexity.ViewModels.Pages
 
         private string _selectedPriority = App.Settings.Prop.RobloxPriority ?? "Normal";
 
-     public ObservableCollection<string> PaneOptions { get; } = new ObservableCollection<string>
-    {
-        "LeftFluent",
-        "LeftMinimal",
-        "Top"
-    };
-
+        public ObservableCollection<string> PaneOptions { get; } = new ObservableCollection<string>
+        {
+            "LeftFluent",
+            "LeftMinimal",
+            "Top"
+        };
 
         public string SelectedPriority
         {
@@ -83,7 +83,6 @@ namespace Plexity.ViewModels.Pages
             }
         }
 
-
         private void OnPaneChanged()
         {
             if (App.Current?.MainWindow is MainWindow mainWindow)
@@ -122,6 +121,28 @@ namespace Plexity.ViewModels.Pages
             }
         }
 
+        // Add property for UI density options
+        public ObservableCollection<UIDensity> DensityOptions { get; } = new ObservableCollection<UIDensity>
+        {
+            UIDensity.Compact,
+            UIDensity.Regular,
+            UIDensity.Expanded
+        };
+
+        // Add property for selected density
+        private UIDensity _selectedDensity = App.Settings.Prop.UIDisplayDensity;
+        public UIDensity SelectedDensity
+        {
+            get => _selectedDensity;
+            set
+            {
+                if (SetProperty(ref _selectedDensity, value))
+                {
+                    App.Settings.Prop.UIDisplayDensity = value;
+                    UIDensityManager.ApplyDensityMode((UIDensityManager.DensityMode)value);
+                }
+            }
+        }
 
         public async Task OnNavigatedToAsync()
         {
