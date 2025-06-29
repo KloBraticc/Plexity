@@ -1,3 +1,0 @@
-# Plexity
-
-NO STEALING LOSSERSSSSSSS :(
