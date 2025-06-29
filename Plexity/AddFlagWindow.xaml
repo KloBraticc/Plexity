@@ -1,0 +1,162 @@
+﻿<Window
+    x:Class="Plexity.AddFlagWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Plexity.Views.Windows"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    mc:Ignorable="d"
+    Title="Add FastFlags"
+    Width="480"
+    Height="295"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    AllowsTransparency="True"
+    Background="{ui:ThemeResource ApplicationBackgroundBrush}">
+
+    <Border CornerRadius="2" Padding="0">
+        <Grid>
+
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Title Bar -->
+            <DockPanel Grid.Row="0" Background="#0D6F6F6F" MouseDown="Window_MouseDown" Height="36">
+                <TextBlock Text="Add FastFlags" FontSize="15"
+                           Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+                           VerticalAlignment="Center"
+                           Margin="12,0" />
+            </DockPanel>
+
+            <!-- Tabs -->
+            <TabControl Grid.Row="1" Margin="16,12,16,12" x:Name="FlagTabs"
+                        Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+                        FontSize="15" Background="#0D6F6F6F">
+                <TabItem Header="Single Flag" Background="#0D6F6F6F" Foreground="{DynamicResource TextFillColorPrimaryBrush}" >
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Name"
+                                   VerticalAlignment="Center"
+                                   FontSize="15"
+                                   Margin="0,20,5,10"
+                                   Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+                        <TextBox Grid.Row="0" Grid.Column="1"
+                                 Name="FlagNameTextBox"
+                                 MinWidth="200"
+                                 Margin="0,20,0,10"
+                                 Padding="6"
+                                 Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                 Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Value"
+                                   VerticalAlignment="Center"
+                                   FontSize="15"
+                                   Margin="0,0,5,0"
+                                   Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+                        <TextBox Grid.Row="1" Grid.Column="1"
+                                 Name="FlagValueTextBox"
+                                 MinWidth="200"
+                                 Padding="6"
+                                 Margin="0,0,0,0"
+                                 Text="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                 PreviewTextInput="ValidateUInt32"
+                                 Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="Import JSON" Background="#0D6F6F6F" FontSize="15" Foreground="{DynamicResource TextFillColorPrimaryBrush}">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBox x:Name="JsonTextBox"
+                                 Grid.Row="0"
+                                 Margin="0,0,0,10"
+                                 AcceptsReturn="True"
+                                 TextChanged="JsonTextBox_TextChanged"
+                                 AcceptsTab="True"
+                                 VerticalScrollBarVisibility="Auto"
+                                 HorizontalScrollBarVisibility="Auto"
+                                 FontFamily="Consolas"
+                                 FontSize="14"
+                                 Padding="10"
+                                 Background="#1E1E1E"
+                                 BorderBrush="#333"
+                                 BorderThickness="1"
+                                 Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+
+                        <TextBlock Grid.Row="0"
+                                   Margin="15,9,0,0"
+                                   IsHitTestVisible="False"
+                                   Text="{}{&#10;    &quot;FFlagYourFlag&quot;: &quot;True&quot;&#10;}"
+                                   Foreground="{DynamicResource TextFillColorPrimaryBrush}">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                    <Style.Triggers>
+                                        <MultiDataTrigger>
+                                            <MultiDataTrigger.Conditions>
+                                                <Condition Binding="{Binding Text, ElementName=JsonTextBox}" Value="" />
+                                                <Condition Binding="{Binding SelectedIndex, ElementName=FlagTabs}" Value="1" />
+                                            </MultiDataTrigger.Conditions>
+                                            <Setter Property="Visibility" Value="Visible" />
+                                        </MultiDataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+
+                        <Button Grid.Row="1"
+                                Height="30"
+                                Margin="0"
+                                Content="Import from File"
+                                Click="ImportButton_Click"
+                                FontSize="15"
+                                Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+                    </Grid>
+                </TabItem>
+            </TabControl>
+
+            <!-- Bottom Buttons -->
+            <Border Grid.Row="2"
+                    Padding="16,12"
+                    Background="#0D6F6F6F"
+                    BorderThickness="0,1,0,0">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Width="100"
+                            Name="OkButton"
+                            Content="OK"
+                            Click="Ok_Click"
+                            FontSize="15"
+                            IsDefault="True"
+                            IsEnabled="False"
+                            Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+
+                    <Button Width="100"
+                            Content="Cancel"
+                            Click="Cancel_Click"
+                            IsCancel="True"
+                             FontSize="15"
+                            Margin="5,0,0,0"
+                            Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Border>
+</Window>
