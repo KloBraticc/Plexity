@@ -1,0 +1,57 @@
+﻿<Window x:Class="Plexity.FastFlagsPatch"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="FastFlagsPatch" Height="600" Width="800">
+    <Grid Margin="10">
+
+        <StackPanel Orientation="Vertical">
+
+            <!-- Input TextBox -->
+            <TextBox x:Name="ValidatorTextBox"
+                     Height="30" Margin="0,0,0,10"
+                     TextChanged="ValidatorTextBox_TextChanged" />
+
+            <!-- Validator Result -->
+            <TextBlock x:Name="ValidatorResultText"
+                       Height="100"
+                       Text="Results will appear here."
+                       Foreground="Gray"
+                       TextWrapping="Wrap"
+                       Margin="0,0,0,10" />
+
+            <!-- Recent Flags DataGrid -->
+            <DataGrid x:Name="FlagsDataGrid"
+                      AutoGenerateColumns="False"
+                      Height="300"
+                      Margin="0,0,0,10"
+                      CanUserAddRows="False"
+                      IsReadOnly="True"
+                      SelectionMode="Single">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Flag Name" Binding="{Binding Key}" Width="*"/>
+                    <DataGridTextColumn Header="Value" Binding="{Binding Value}" Width="*"/>
+                    <DataGridTextColumn Header="Added" Binding="{Binding AddedTimestamp}" Width="150" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <!-- Buttons -->
+            <WrapPanel Orientation="Horizontal">
+                <Button Content="Show All New Flags"
+                        Margin="5"
+                        Click="ShowAllNewFlagsButton_Click" />
+                <Button Content="Show True Flags"
+                        Margin="5"
+                        Click="ShowTrueFlagsButton_Click" />
+                <Button Content="Show False Flags"
+                        Margin="5"
+                        Click="ShowFalseFlagsButton_Click" />
+                <Button x:Name="RefreshValidatorButton"
+                        Content="Refresh Validator"
+                        Margin="5"
+                        Click="RefreshValidatorButton_Click" />
+            </WrapPanel>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

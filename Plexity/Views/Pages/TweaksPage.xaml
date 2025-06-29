@@ -1,0 +1,222 @@
+﻿<Page
+    x:Class="Plexity.Views.Pages.TweaksPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Plexity.Views.Pages"
+    xmlns:helpers="clr-namespace:Plexity.Helpers"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    Title="TweaksPage"
+    d:DesignHeight="1500"
+    d:DesignWidth="800"
+    d:DataContext="{d:DesignInstance local:TweaksPage, IsDesignTimeCreatable=False}"
+    Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
+    ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    mc:Ignorable="d">
+
+    <StackPanel Margin="8">
+        <TextBlock Text="Use this Page to Tweak your PC to your liking." FontSize="14" TextWrapping="Wrap" />
+
+        <!-- Repeat for each toggle in ViewModel -->
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Launch on Startup" FontSize="15" />
+                <TextBlock Text="Starts Plexity when Windows boots." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding LaunchOnStartup, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+        <!-- Enable Game Mode -->
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Enable Game Mode" FontSize="15" />
+                <TextBlock Text="Enables Windows Game Mode for gaming performance." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding EnableGameMode, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+
+        <!-- Disable Animations -->
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Disable Windows Animations" FontSize="15" />
+                <TextBlock Text="Turns off UI animations for better performance." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding DisableAnimations, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+        <!-- Network Boost -->
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Enable Network Boost" FontSize="15" />
+                <TextBlock Text="Disables Windows Update and background downloads." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding NetworkBoost, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Disable Background Apps" FontSize="15" />
+                <TextBlock Text="Stops unnecessary apps running in the background." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding DisableBackgroundApps, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+        
+        
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Enable Dark Mode" FontSize="15" />
+                <TextBlock Text="Switches system theme to dark for less eye strain." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding EnableDarkMode, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+        <!-- Disable Telemetry -->
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Disable Telemetry" FontSize="15" />
+                <TextBlock Text="Stops Windows from sending diagnostic data." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding DisableTelemetry, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+        <!-- Disable Cortana -->
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Disable Cortana" FontSize="15" />
+                <TextBlock Text="Turns off Cortana assistant for privacy." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding DisableCortana, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+        <!-- Disable Windows Defender -->
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Disable Windows Defender" FontSize="15" />
+                <TextBlock Text="Turns off Windows Defender antivirus." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding DisableDefender, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+        <!-- Disable Startup Apps -->
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Disable Startup Apps" FontSize="15" />
+                <TextBlock Text="Prevents apps from starting with Windows." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding DisableStartupApps, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+        <!-- Disable Lock Screen Ads -->
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Disable Lock Screen Ads" FontSize="15" />
+                <TextBlock Text="Removes ads from the lock screen." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding DisableLockScreenAds, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+        <!-- Enable File Explorer Preview -->
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Enable File Explorer Preview" FontSize="15" />
+                <TextBlock Text="Shows file previews in Explorer." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding EnableExplorerPreview, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+        <!-- Disable USB Selective Suspend -->
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Disable USB Selective Suspend" FontSize="15" />
+                <TextBlock Text="Prevents USB devices from powering down." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding DisableUsbSelectiveSuspend, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+        <!-- Enable Remote Desktop -->
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Enable Remote Desktop" FontSize="15" />
+                <TextBlock Text="Allows remote connection to your PC." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding EnableRemoteDesktop, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+        <!-- Disable Windows Tips -->
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Disable Windows Tips" FontSize="15" />
+                <TextBlock Text="Stops Windows from showing tips and tricks." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding DisableWindowsTips, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+        <!-- Enable Quick Access -->
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Enable Quick Access" FontSize="15" />
+                <TextBlock Text="Shows frequently used folders in Explorer." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding EnableQuickAccess, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+        <!-- Enable Indexing -->
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Enable Indexing" FontSize="15" />
+                <TextBlock Text="Speeds up file searches by indexing files." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding EnableIndexing, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+        <!-- Disable SMBv1 -->
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Disable SMBv1" FontSize="15" />
+                <TextBlock Text="Disables outdated SMBv1 protocol for security." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding DisableSMBv1, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+        <!-- Enable Storage Spaces -->
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Enable Storage Spaces" FontSize="15" />
+                <TextBlock Text="Allows pooling of multiple drives for redundancy." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding EnableStorageSpaces, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+        <!-- Disable Sync Center -->
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Disable Sync Center" FontSize="15" />
+                <TextBlock Text="Prevents offline file synchronization." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding DisableSyncCenter, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+        <!-- Enable Windows Hello -->
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Enable Windows Hello" FontSize="15" />
+                <TextBlock Text="Allows biometric sign-in methods." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding EnableWindowsHello, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+        <!-- Disable Xbox Game Bar -->
+        <ui:Card Padding="10" Margin="0,8,0,20" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Disable Xbox Game Bar" FontSize="15" />
+                <TextBlock Text="Turns off Xbox overlay and related services." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E" />
+                <ui:ToggleSwitch IsChecked="{Binding DisableXboxGameBar, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+    </StackPanel>
+</Page>

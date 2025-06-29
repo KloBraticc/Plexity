@@ -1,0 +1,128 @@
+﻿<Page
+    x:Class="Plexity.Views.Pages.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Plexity.Views.Pages"
+    xmlns:helpers="clr-namespace:Plexity.Helpers"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    Title="SettingsPage"
+    d:DesignHeight="900"
+    d:DesignWidth="800"
+    d:DataContext="{d:DesignInstance local:SettingsPage, IsDesignTimeCreatable=False}"
+    Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
+    ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    mc:Ignorable="d">
+
+    <StackPanel Margin="4">
+
+        <ui:Card Padding="10" Margin="0,0,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="App Theme" FontSize="15" Foreground="{DynamicResource TextFillColorPrimaryBrush}"/>
+                <TextBlock Text="Choose between Light and Dark themes. Note: The Light Theme is less stable and may contain bugs."
+                           FontSize="12"
+                           Margin="0,4,0,10"
+                           Foreground="#FF9E9E9E"/>
+                <ComboBox Width="200"
+                      Padding="8,4"
+                      ItemsSource="{Binding ThemeOptions}"
+                      SelectedItem="{Binding CurrentTheme, Mode=TwoWay}"
+                      HorizontalAlignment="Left"/>
+            </StackPanel>
+        </ui:Card>
+
+        <ui:Card Padding="12" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock 
+            Text="Navigation Pane Display Mode" 
+            FontSize="15" 
+            Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+
+                <TextBlock 
+            Text="Select how the navigation pane is displayed within the app interface. Choose the layout that best suits your workflow and screen size."
+            FontSize="13"
+            Margin="0,6,0,14"
+            TextWrapping="Wrap"
+            Foreground="#FF9E9E9E" />
+
+                <ComboBox 
+            Width="220"
+            Padding="8,5"
+            ItemsSource="{Binding PaneOptions}"
+            SelectedItem="{Binding CurrentPane, Mode=TwoWay}"
+            HorizontalAlignment="Left" />
+            </StackPanel>
+        </ui:Card>
+
+
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="UI Density" FontSize="15" Foreground="{DynamicResource TextFillColorPrimaryBrush}"/>
+                <TextBlock Text="Adjust UI element spacing." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E"/>
+                <ComboBox 
+            Width="220"
+            Padding="8,5"
+            ItemsSource="{Binding DensityOptions}"
+            SelectedItem="{Binding SelectedDensity, Mode=TwoWay}" HorizontalAlignment="Left"  />
+            </StackPanel>
+        </ui:Card>
+
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Dont close Plexity" FontSize="15" Foreground="{DynamicResource TextFillColorPrimaryBrush}"/>
+                <TextBlock Text="Keeps Plexity open when Roblox is Launched." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E"/>
+                <ui:ToggleSwitch IsChecked="{Binding KeepPlexityOpen, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Advanced Debug" FontSize="15" Foreground="{DynamicResource TextFillColorPrimaryBrush}"/>
+                <TextBlock Text="Shows Debug log in the Launcher Page when launching Roblox. Note: This keeps Plexity open to debug." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E"/>
+                <ui:ToggleSwitch IsChecked="{Binding DebugLogging, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+        <Border Height="1" Margin="0,15,0,15" Background="#FF404040" />
+
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Launch Delay" FontSize="15" Foreground="{DynamicResource TextFillColorPrimaryBrush}"/>
+                <TextBlock Text="Configure a custom launch delay for Roblox." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E"/>
+                <ui:TextBox MinWidth="300" Name="LaunchDelayTextBox"
+                                Padding="10,5,10,5"
+                                HorizontalAlignment="Stretch"
+                                TextChanged="LaunchDelayTextBox_TextChanged"
+                                LostFocus="LaunchDelayTextBox_LostFocus"
+                                PreviewTextInput="LaunchDelayTextBox_PreviewTextInput"/>
+            </StackPanel>
+        </ui:Card>
+
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Force Roblox reinstall" FontSize="15" Foreground="{DynamicResource TextFillColorPrimaryBrush}"/>
+                <TextBlock Text="Roblox will reinstall fresh on next launch." FontSize="12" Margin="0,4,0,10" Foreground="#FF9E9E9E"/>
+                <ui:ToggleSwitch IsChecked="{Binding ForceRobloxReinstallation, Mode=TwoWay}" />
+            </StackPanel>
+        </ui:Card>
+
+        <ui:Card Padding="10" Margin="0,8,0,0" Background="#0D6F6F6F">
+            <StackPanel>
+                <TextBlock Text="Roblox Priority" FontSize="15" Foreground="{DynamicResource TextFillColorPrimaryBrush}"/>
+                <TextBlock Text="Select the Priority Level to launch Roblox."
+                           FontSize="12"
+                           Margin="0,4,0,10"
+                           Foreground="#FF9E9E9E"/>
+                <ComboBox Width="200"
+                      Padding="8,4"
+                      ItemsSource="{Binding PriorityOptions}"
+                      SelectedItem="{Binding SelectedPriority, Mode=TwoWay}"
+                      HorizontalAlignment="Left"/>
+            </StackPanel>
+        </ui:Card>
+
+    </StackPanel>
+
+</Page>
