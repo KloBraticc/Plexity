@@ -1,12 +1,116 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Hiile\\Desktop\\plexitySourceMain\\Plexity\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Hiile\\Desktop\\Plexity-main (1)\\Plexity-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{26062A7F-393A-4BBB-A9B0-EFD77040C17A}|Plexity\\Plexity.csproj|c:\\users\\hiile\\desktop\\plexity-main (1)\\plexity-main\\plexity\\newflagfinderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{26062A7F-393A-4BBB-A9B0-EFD77040C17A}|Plexity\\Plexity.csproj|solutionrelative:plexity\\newflagfinderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26062A7F-393A-4BBB-A9B0-EFD77040C17A}|Plexity\\Plexity.csproj|c:\\users\\hiile\\desktop\\plexity-main (1)\\plexity-main\\plexity\\newflagfinderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26062A7F-393A-4BBB-A9B0-EFD77040C17A}|Plexity\\Plexity.csproj|solutionrelative:plexity\\newflagfinderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26062A7F-393A-4BBB-A9B0-EFD77040C17A}|Plexity\\Plexity.csproj|c:\\users\\hiile\\desktop\\plexity-main (1)\\plexity-main\\plexity\\services\\flagdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26062A7F-393A-4BBB-A9B0-EFD77040C17A}|Plexity\\Plexity.csproj|solutionrelative:plexity\\services\\flagdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26062A7F-393A-4BBB-A9B0-EFD77040C17A}|Plexity\\Plexity.csproj|c:\\users\\hiile\\desktop\\plexity-main (1)\\plexity-main\\plexity\\views\\pages\\aboutpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{26062A7F-393A-4BBB-A9B0-EFD77040C17A}|Plexity\\Plexity.csproj|solutionrelative:plexity\\views\\pages\\aboutpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26062A7F-393A-4BBB-A9B0-EFD77040C17A}|Plexity\\Plexity.csproj|c:\\users\\hiile\\desktop\\plexity-main (1)\\plexity-main\\plexity\\views\\pages\\fastflageditor.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26062A7F-393A-4BBB-A9B0-EFD77040C17A}|Plexity\\Plexity.csproj|solutionrelative:plexity\\views\\pages\\fastflageditor.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26062A7F-393A-4BBB-A9B0-EFD77040C17A}|Plexity\\Plexity.csproj|c:\\users\\hiile\\desktop\\plexity-main (1)\\plexity-main\\plexity\\views\\pages\\fastflageditor.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{26062A7F-393A-4BBB-A9B0-EFD77040C17A}|Plexity\\Plexity.csproj|solutionrelative:plexity\\views\\pages\\fastflageditor.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FlagDataService.cs",
+              "DocumentMoniker": "C:\\Users\\Hiile\\Desktop\\Plexity-main (1)\\Plexity-main\\Plexity\\Services\\FlagDataService.cs",
+              "RelativeDocumentMoniker": "Plexity\\Services\\FlagDataService.cs",
+              "ToolTip": "C:\\Users\\Hiile\\Desktop\\Plexity-main (1)\\Plexity-main\\Plexity\\Services\\FlagDataService.cs",
+              "RelativeToolTip": "Plexity\\Services\\FlagDataService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T16:34:04.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AboutPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Hiile\\Desktop\\Plexity-main (1)\\Plexity-main\\Plexity\\Views\\Pages\\AboutPage.xaml",
+              "RelativeDocumentMoniker": "Plexity\\Views\\Pages\\AboutPage.xaml",
+              "ToolTip": "C:\\Users\\Hiile\\Desktop\\Plexity-main (1)\\Plexity-main\\Plexity\\Views\\Pages\\AboutPage.xaml",
+              "RelativeToolTip": "Plexity\\Views\\Pages\\AboutPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-29T16:47:22.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FastFlagEditor.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Hiile\\Desktop\\Plexity-main (1)\\Plexity-main\\Plexity\\Views\\Pages\\FastFlagEditor.xaml.cs",
+              "RelativeDocumentMoniker": "Plexity\\Views\\Pages\\FastFlagEditor.xaml.cs",
+              "ToolTip": "C:\\Users\\Hiile\\Desktop\\Plexity-main (1)\\Plexity-main\\Plexity\\Views\\Pages\\FastFlagEditor.xaml.cs",
+              "RelativeToolTip": "Plexity\\Views\\Pages\\FastFlagEditor.xaml.cs",
+              "ViewState": "AgIAAH4BAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T16:34:41.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NewFlagFinderWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Hiile\\Desktop\\Plexity-main (1)\\Plexity-main\\Plexity\\NewFlagFinderWindow.xaml",
+              "RelativeDocumentMoniker": "Plexity\\NewFlagFinderWindow.xaml",
+              "ToolTip": "C:\\Users\\Hiile\\Desktop\\Plexity-main (1)\\Plexity-main\\Plexity\\NewFlagFinderWindow.xaml",
+              "RelativeToolTip": "Plexity\\NewFlagFinderWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-29T16:34:30.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NewFlagFinderWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Hiile\\Desktop\\Plexity-main (1)\\Plexity-main\\Plexity\\NewFlagFinderWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Plexity\\NewFlagFinderWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Hiile\\Desktop\\Plexity-main (1)\\Plexity-main\\Plexity\\NewFlagFinderWindow.xaml.cs",
+              "RelativeToolTip": "Plexity\\NewFlagFinderWindow.xaml.cs",
+              "ViewState": "AgIAACEBAAAAAAAAAAAkwEEBAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T16:34:15.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FastFlagEditor.xaml",
+              "DocumentMoniker": "C:\\Users\\Hiile\\Desktop\\Plexity-main (1)\\Plexity-main\\Plexity\\Views\\Pages\\FastFlagEditor.xaml",
+              "RelativeDocumentMoniker": "Plexity\\Views\\Pages\\FastFlagEditor.xaml",
+              "ToolTip": "C:\\Users\\Hiile\\Desktop\\Plexity-main (1)\\Plexity-main\\Plexity\\Views\\Pages\\FastFlagEditor.xaml",
+              "RelativeToolTip": "Plexity\\Views\\Pages\\FastFlagEditor.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-29T16:35:03.132Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

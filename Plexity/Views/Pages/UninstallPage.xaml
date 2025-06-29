@@ -1,0 +1,49 @@
+﻿<Page
+    x:Class="Plexity.Views.Pages.UninstallPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Plexity.Views.Pages"
+    xmlns:models="clr-namespace:Plexity.Models"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    Title="UninstallPage"
+    d:DataContext="{d:DesignInstance local:UninstallPage, IsDesignTimeCreatable=False}"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
+    ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    ScrollViewer.CanContentScroll="False"
+    mc:Ignorable="d">
+
+    <Grid Margin="40,30">
+        <StackPanel HorizontalAlignment="Center" Width="720">
+            <TextBlock
+                FontSize="20"
+                FontWeight="SemiBold"
+                Text="Uninstall Plexity"
+                Margin="0,0,0,10"
+                Foreground="{StaticResource TextFillColorPrimaryBrush}" />
+
+            <TextBlock
+                FontSize="14"
+                Foreground="{StaticResource TextFillColorTertiaryBrush}"
+                TextWrapping="Wrap"
+                Text="Uninstalling Plexity will remove it from your system and restore the default Roblox launcher if it’s still installed. However, the uninstallation process may not remove all leftover files, so you may need to clean them up manually from the installation directory." />
+
+            <Separator Margin="0,50"/>
+
+            <Button
+                Content="Uninstall Plexity"
+                Width="720"
+                Padding="0,10"
+                Margin="0,0,0,10"/>
+
+            <Button
+                Content="Cancel"
+                Width="720"
+                Padding="0,10"/>
+        </StackPanel>
+    </Grid>
+</Page>

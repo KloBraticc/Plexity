@@ -1,0 +1,25 @@
+﻿// To debug the automatic updater:
+// - Uncomment the definition below
+// - Publish the executable
+// - Launch the executable (click no when it asks you to upgrade)
+// - Launch Roblox (for testing web launches, run it from the command prompt)
+// - To re-test the same executable, delete it from the installation folder
+
+
+namespace Plexity
+{
+    internal class ManagementObjectSearcher
+    {
+        private string v;
+
+        public ManagementObjectSearcher(string v)
+        {
+            this.v = v;
+        }
+
+        internal IEnumerable<ManagementObject> Get()
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
