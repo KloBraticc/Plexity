@@ -11,9 +11,9 @@ namespace Plexity.ViewModels.Pages
     public class UninstallViewModel
     {
         public string Text => string.Format(
-            "For help, visit",
-            "https://github.com/BloxstrapLabs/Bloxstrap/wiki/Roblox-crashes-or-does-not-launch",
-            Paths.Base
+            "For help, visit {0}", // Added proper placeholder
+            "https://github.com/BloxstrapLabs/Bloxstrap/wiki/Roblox-crashes-or-does-not-launch"
+            // Removed unused third parameter
         );
 
         public bool KeepData { get; set; } = true;

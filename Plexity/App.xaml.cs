@@ -658,5 +658,85 @@ namespace Plexity
             DialogService.ShowMessage($"A critical exception was thrown:\n{ex}", "Unhandled Exception", MessageBoxButton.OK, MessageBoxImage.Error);
             Terminate(-1);
         }
+
+        private void ConfigureUnhandledExceptionHandling()
+        {
+            // Handle exceptions from all threads
+            AppDomain.CurrentDomain.UnhandledException += (s, e) =>
+            {
+                LogFatalException((Exception)e.ExceptionObject, "AppDomain.CurrentDomain.UnhandledException");
+                
+                if (!e.IsTerminating)
+                {
+                    ShowCrashDialog((Exception)e.ExceptionObject);
+                }
+            };
+            
+            // Handle exceptions from each dispatcher thread
+            DispatcherUnhandledException += (s, e) =>
+            {
+                LogFatalException(e.Exception, "Application.Current.DispatcherUnhandledException");
+                e.Handled = true;
+                ShowCrashDialog(e.Exception);
+            };
+            
+            // Handle exceptions in tasks
+            TaskScheduler.UnobservedTaskException += (s, e) =>
+            {
+                LogFatalException(e.Exception, "TaskScheduler.UnobservedTaskException");
+                e.SetObserved();
+                ShowCrashDialog(e.Exception);
+            };
+        }
+
+        private void LogFatalException(Exception exception, string source)
+        {
+            try
+            {
+                Logger.WriteLine(LogLevel.Error, "FatalException", $"Source: {source}, Exception: {exception}");
+                
+                // Write to crash log file - use fully qualified name
+                string crashLog = $"{DateTime.Now}: {source}\n{exception}\n\n";
+                System.IO.File.AppendAllText(Path.Combine(Paths.Base, "crash.log"), crashLog);
+            }
+            catch
+            {
+                // Last resort if logging fails
+            }
+        }
+
+        private void ShowCrashDialog(Exception exception)
+        {
+            try
+            {
+                // Create a simple crash dialog
+                var message = $"Plexity encountered an error:\n{exception.Message}\n\nThe error has been logged.";
+                MessageBox.Show(message, "Plexity Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch
+            {
+                // Last resort if dialog fails
+            }
+        }
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            // Configure exception handling
+            ConfigureUnhandledExceptionHandling();
+
+            // Apply system optimizations
+            SystemOptimizer.OptimizeForCurrentSystem();
+
+            // Apply resource optimizations
+            ResourceOptimizer.ApplyPerformanceOptimizedResources();
+
+            // Continue with normal startup
+            // InitializeApplicationAsync();
+
+            // Rest of your startup code
+        }
+
+        
     }
 }

@@ -387,6 +387,53 @@ namespace Plexity.Views.Windows
         }
 
         #endregion
+
+        private async Task InitializeApplicationAsync()
+        {
+            // Adjust these to match your actual UI elements
+            // If you don't have a loading indicator, you can create one
+            var mainContentArea = this.FindName("MainPanel") as FrameworkElement;  // Replace with your actual main content panel name
+            var loadingIndicator = this.FindName("LoadingSpinner") as FrameworkElement;  // Replace with your actual loading indicator name
+            
+            if (mainContentArea != null && loadingIndicator != null)
+            {
+                // Show loading indicator
+                mainContentArea.Visibility = Visibility.Collapsed;
+                loadingIndicator.Visibility = Visibility.Visible;
+            }
+            
+            // Load critical services first
+            await Task.Run(() => InitializeEssentialServices());
+            
+            if (mainContentArea != null && loadingIndicator != null)
+            {
+                // Show main UI
+                mainContentArea.Visibility = Visibility.Visible;
+                loadingIndicator.Visibility = Visibility.Collapsed;
+            }
+            
+            // Load non-critical components in the background
+            _ = Task.Run(async () =>
+            {
+                await Task.Delay(100); // Give UI time to render
+                await InitializeNonEssentialServicesAsync();
+            });
+        }
+
+        private void InitializeEssentialServices()
+        {
+            // Your essential services initialization
+        }
+
+        private async Task InitializeNonEssentialServicesAsync()
+        {
+            // Your non-essential services initialization
+            
+            await UiThreadHelper.SafeExecuteAsync(() =>
+            {
+                // Update UI after services are initialized
+            });
+        }
     }
 
     public class RelayCommand : ICommand

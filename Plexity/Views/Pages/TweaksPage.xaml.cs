@@ -16,7 +16,6 @@ namespace Plexity.Views.Pages
             InitializeComponent();
             ViewModel = viewModel ?? throw new ArgumentNullException(nameof(viewModel));
             DataContext = ViewModel;
-           
         }
     }
 }

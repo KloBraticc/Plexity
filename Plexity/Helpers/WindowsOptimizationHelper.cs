@@ -36,14 +36,14 @@ namespace Plexity.Helpers
 
         public static async Task OptimizeForCurrentWindowsAsync(Window window)
         {
-            await Task.Run(() =>
+            try
             {
-                try
-                {
-                    var windowsVersion = GetWindowsVersion();
-                    _logger?.LogInformation("Optimizing for Windows version: {Version}", windowsVersion);
+                var windowsVersion = GetWindowsVersion();
+                _logger?.LogInformation("Optimizing for Windows version: {Version}", windowsVersion);
 
-                    // Apply version-specific optimizations
+                // Apply version-specific optimizations
+                await Task.Run(() => 
+                {
                     if (windowsVersion.Major >= 10)
                     {
                         OptimizeForWindows10Plus(window);
@@ -53,15 +53,15 @@ namespace Plexity.Helpers
                             OptimizeForWindows11(window);
                         }
                     }
+                });
 
-                    // Universal optimizations
-                    ApplyUniversalOptimizations(window);
-                }
-                catch (Exception ex)
-                {
-                    _logger?.LogWarning(ex, "Failed to apply Windows optimizations");
-                }
-            });
+                // Universal optimizations - run on UI thread
+                ApplyUniversalOptimizations(window);
+            }
+            catch (Exception ex)
+            {
+                _logger?.LogWarning(ex, "Failed to apply Windows optimizations");
+            }
         }
 
         private static void OptimizeForWindows10Plus(Window window)
