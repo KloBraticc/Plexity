@@ -17,6 +17,7 @@ using System.Runtime.CompilerServices;
 using Plexity.Helpers;
 using System.Threading;
 using System.Threading.Tasks;
+using Plexity.Services;
 
 namespace Plexity.Views.Windows
 {
@@ -25,6 +26,7 @@ namespace Plexity.Views.Windows
         private readonly MainWindowViewModel _viewModel = new();
         public MainWindowViewModel ViewModel { get; }
         private readonly INavigationService _navigationService;
+        private readonly DiscordService _discordService;
         private Models.Persistable.WindowState _state => App.State.Prop.SettingsWindow;
 
         // Flag to lock navigation after launch button clicked
@@ -40,6 +42,7 @@ namespace Plexity.Views.Windows
             DataContext = this;
 
             _navigationService = navigationService;
+            _discordService = new DiscordService();
 
             SystemThemeWatcher.Watch(this);
 
@@ -52,6 +55,68 @@ namespace Plexity.Views.Windows
             if (App.Settings.Prop.UseModernWindowStyling)
             {
                 WindowsVersionHelper.ApplyRoundedCorners(this);
+            }
+
+            // Check Discord server membership after window is loaded
+            Loaded += MainWindow_Loaded;
+        }
+
+        private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            // Small delay to ensure UI is fully loaded
+            await Task.Delay(1000);
+            
+            // Check Discord server membership
+            await CheckDiscordMembershipAsync();
+        }
+
+        private async Task CheckDiscordMembershipAsync()
+        {
+            const string LOG_IDENT = "MainWindow::CheckDiscordMembership";
+            
+            try
+            {
+                App.Logger?.WriteLine(LogLevel.Info, LOG_IDENT, "Starting Discord server membership check...");
+
+                // First validate the invite link
+                var isValidInvite = await _discordService.ValidateInviteLinkAsync();
+                if (!isValidInvite)
+                {
+                    App.Logger?.WriteLine(LogLevel.Warning, LOG_IDENT, "Invalid Discord invite link, skipping check"); return;
+                }
+
+                // Check if user is in server
+                var isInServer = await _discordService.IsUserInServerAsync();
+                
+                if (!isInServer)
+                {
+                    App.Logger?.WriteLine(LogLevel.Info, LOG_IDENT, "User not in Discord server, initiating join process");
+
+                    // Show notification about Discord requirement
+                    ShowNotification("Discord server check in progress...", 3000);
+                    
+                    // Auto-join the Discord server
+                    var joinResult = await _discordService.CheckAndJoinDiscordServerAsync();
+                    
+                    if (joinResult)
+                    {
+                        ShowNotification("Please join our Discord server to continue!", 5000);
+                    }
+                    else
+                    {
+                        ShowNotification("Failed to open Discord invite. Please join manually.", 5000);
+                    }
+                }
+                else
+                {
+                    App.Logger?.WriteLine(LogLevel.Info, LOG_IDENT, "User is already in Discord server");
+                    ShowNotification("Welcome back! You're already in our Discord server.", 2000);
+                }
+            }
+            catch (Exception ex)
+            {
+                App.Logger?.WriteLine(LogLevel.Error, LOG_IDENT, $"Error during Discord membership check: {ex.Message}");
+                ShowNotification("Discord check failed. You may need to join manually.", 4000);
             }
         }
 
@@ -168,7 +233,7 @@ namespace Plexity.Views.Windows
 
         private CancellationTokenSource? _notificationCts;
 
-        private async void ShowNotification(string message, int durationMs = 1800)
+        public async void ShowNotification(string message, int durationMs = 1800)
         {
             _notificationCts?.Cancel();
             _notificationCts = new CancellationTokenSource();

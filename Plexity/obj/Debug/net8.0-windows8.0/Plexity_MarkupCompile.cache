@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Hiile\Desktop\Plexity-main (1)\Plexity-main\Plexity\obj\Debug\net8.0-windows8.0\
+C:\Users\koray\source\repos\KloBraticc\Plexity\Plexity\obj\Debug\net8.0-windows8.0\
 Plexity
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS8_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS8_0_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\Hiile\Desktop\Plexity-main (1)\Plexity-main\Plexity\App.xaml
+C:\Users\koray\source\repos\KloBraticc\Plexity\Plexity\App.xaml
 18661710798
 11562051256
-2061875138900
-249-861332445
+2071833945749
+249-91463643
 AddFlagWindow.xaml;ConfirmDialog.xaml;FirstTimeShow.xaml;NewFlagFinderWindow.xaml;PluginCreate.xaml;Views\Pages\AboutPage.xaml;Views\Pages\DashboardPage.xaml;Views\Pages\DeploymentPage.xaml;Views\Pages\FastFlagEditor.xaml;Views\Pages\FastFlagsPage.xaml;Views\Pages\LaunchPage.xaml;Views\Pages\ModsPage.xaml;Views\Pages\PluginsPage.xaml;Views\Pages\SettingsPage.xaml;Views\Pages\TweaksPage.xaml;Views\Pages\UninstallPage.xaml;Views\Pages\VersionsPage.xaml;Views\Windows\MainWindow.xaml;
 
 False
