@@ -104,9 +104,11 @@ Plexity is a fast, customizable Roblox bootstrapper built for full client-level 
 
 ### 👨‍💻 Core Devs
 
-- **Bratic** – Creator/Owner · [GitHub](https://github.com/KloBraticc?tab=repositories)
-- **Midka** – Co-Owner/FFlags · [GitHub](https://github.com/midaskira)
-- **Akhil** – FFlags · [GitHub](https://github.com/midaskira)
-- **Luci** – UI · [GitHub](https://github.com/Luc6i)
+- **[Bratic](https://guns.lol/braticishim)** – Creator/Owner
+- **[Midka](https://github.com/midaskira)** – Co-Owner/FFlags
+- **[Akhil](https://guns.lol/realakhil)** – FFlags
+- **[Luci](https://github.com/Luc6i)** – UI
 
-> Thanks for choosing **Plexity**. Keep building, keep exploring! 🚀
+---
+
+*Thanks for choosing **Plexity**. Enjoy smooth gameplay! 🚀*
