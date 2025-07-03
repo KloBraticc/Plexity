@@ -30,19 +30,6 @@ Plexity is a fast, customizable Roblox bootstrapper built for full client-level 
   </a>
 </p>
 
----
-
-## ✨ Why Use Plexity?
-
-- ⚡ **Faster Boot Times** – Slim, optimized launcher core.
-- 🧩 **Patching System** – Inject custom logic into the client.
-- 🛡 **Safe & Non-Invasive** – Leaves your Roblox install untouched.
-- 🖥️ **CLI + GUI** – Choose the interface that fits your workflow.
-- 🧪 **Developer Tools** – Dev mode, verbose logs, patch logs, and more.
-- 🚫 **Update Control** – Skip forced updates when needed.
-- 🛠 **API Switcher** – Modify the API install branch on launch.
-
----
 
 ## 📥 Installation
 
@@ -52,9 +39,23 @@ Plexity is a fast, customizable Roblox bootstrapper built for full client-level 
 
 ---
 
-## 🧩 Features Breakdown
+<details>
+  <summary><h2>✨ Why Use Plexity?</h2></summary>
 
-### 🔌 Integrations
+- ⚡ **Faster Boot Times** – Slim, optimized launcher core.
+- 🧩 **Patching System** – Inject custom logic into the client.
+- 🛡 **Safe & Non-Invasive** – Leaves your Roblox install untouched.
+- 🖥️ **CLI + GUI** – Choose the interface that fits your workflow.
+- 🧪 **Developer Tools** – Dev mode, verbose logs, patch logs, and more.
+- 🚫 **Update Control** – Skip forced updates when needed.
+- 🛠 **API Switcher** – Modify the API install branch on launch.
+
+</details>
+
+<details>
+  <summary><h2>🧩 Features Breakdown</h2></summary>
+
+<h3>🔌 Integrations</h3>
 
 - **Display Resolution** – Change your display resolution, use stretch res, and more.
 - **Plugins** – Install or create your own plugins to enhance Plexity/Roblox.
@@ -67,7 +68,7 @@ Plexity is a fast, customizable Roblox bootstrapper built for full client-level 
 
 ---
 
-### 🧠 Smart Utilities
+<h3>🧠 Smart Utilities</h3>
 
 - **Patch Queue System** – Apply multiple patches at once.
 - **Memory Clean Mode** – Reduce RAM usage by cleaning temp logs.
@@ -77,7 +78,7 @@ Plexity is a fast, customizable Roblox bootstrapper built for full client-level 
 
 ---
 
-### ⚙️ Bootstrap Control
+<h3>⚙️ Bootstrap Control</h3>
 
 - **API Selection** – Choose which API Plexity uses to install Roblox.
 - **Pane UI Customization** – Customize the layout of the user interface.
@@ -86,13 +87,15 @@ Plexity is a fast, customizable Roblox bootstrapper built for full client-level 
 
 ---
 
-### 🎨 UI & Theming
+<h3>🎨 UI & Theming</h3>
 
 *Coming soon or under development.*
 
+</details>
+
 ---
 
-## 🤝 Community & Support
+<h3>🤝 Community & Support</h3>
 
 - 💬 **Join our Discord:** [Plexity Server](https://discord.gg/RrPVWUxZzA) for support, updates, and community chat.
 - 🐞 **Bug Reports:** Use the [Reports](https://plexity.netlify.app/#report-bug).
