@@ -17,7 +17,7 @@ Plexity is a fast, customizable Roblox bootstrapper built for full client-level 
 
 <h2>🚀 Quick Links</h2>
 
-<p align="center">
+<div align="center">
 
 [![Plexity Wiki](https://img.shields.io/badge/Plexity-Wiki-purple)](https://plexitywiki.netlify.app)
   <a href="https://github.com/YOURUSERNAME/Plexity/releases">
@@ -26,13 +26,10 @@ Plexity is a fast, customizable Roblox bootstrapper built for full client-level 
   <a href="https://github.com/YOURUSERNAME/Plexity/releases">
     <img src="https://img.shields.io/github/v/release/YOURUSERNAME/Plexity?color=0a84ff&label=Latest" alt="Latest Release">
   </a>
-  <a href="https://github.com/YOURUSERNAME/Plexity/stargazers">
-    <img src="https://img.shields.io/github/stars/YOURUSERNAME/Plexity?color=ffd700&label=Stars" alt="Stars">
-  </a>
-  <a href="https://discord.gg/RrPVWUxZzA">
-    <img src="https://img.shields.io/discord/000000000000000000?logo=discord&logoColor=white&label=Discord&color=5865f2" alt="Join Discord">
-  </a>
-</p>
+[![GitHub stars](https://img.shields.io/github/stars/KloBraticc/Plexity?style=social)](https://github.com/KloBraticc/Plexity/stargazers)
+[![Discord](https://img.shields.io/discord/1388222191937523762?label=Discord&color=5865F2&logo=discord&logoColor=white)](https://discord.gg/XmqFgxwAhd)
+
+</div>
 
 ---
 
