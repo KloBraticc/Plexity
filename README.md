@@ -18,6 +18,8 @@ Plexity is a fast, customizable Roblox bootstrapper built for full client-level 
 <h2>🚀 Quick Links</h2>
 
 <p align="center">
+
+[![Plexity Wiki](https://img.shields.io/badge/Plexity-Wiki-purple)](https://plexitywiki.netlify.app)
   <a href="https://github.com/YOURUSERNAME/Plexity/releases">
     <img src="https://img.shields.io/github/downloads/YOURUSERNAME/Plexity/total?color=00d8ff&label=Downloads" alt="Downloads">
   </a>
