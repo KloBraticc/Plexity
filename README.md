@@ -13,7 +13,7 @@ Plexity is a fast, customizable Roblox bootstrapper built for full client-level 
 
 ---
 
-## 🚀 Quick Links
+<h2>🚀 Quick Links</h2>
 
 <p align="center">
   <a href="https://github.com/YOURUSERNAME/Plexity/releases">
@@ -30,8 +30,9 @@ Plexity is a fast, customizable Roblox bootstrapper built for full client-level 
   </a>
 </p>
 
+---
 
-## 📥 Installation
+## 📥 Installation Guide
 
 1. **Download:** Head to the [Releases page](https://github.com//Plexity/releases).
 2. **Extract or Install:** Run `bootstrap.ps1` or use the installer.
@@ -93,24 +94,26 @@ Plexity is a fast, customizable Roblox bootstrapper built for full client-level 
 
 </details>
 
----
-
-<h3>🤝 Community & Support</h3>
+<details>
+  <summary><h3>🤝 Community & Support</h3></summary>
 
 - 💬 **Join our Discord:** [Plexity Server](https://discord.gg/RrPVWUxZzA) for support, updates, and community chat.
 - 🐞 **Bug Reports:** Use the [Reports](https://plexity.netlify.app/#report-bug).
 - ⭐ **Star this repo:** Your support helps keep the project going.
 
----
+</details>
 
-## 🙌 Credits
+<details>
+  <summary><h2>🙌 Credits</h2></summary>
 
-### 👨‍💻 Core Devs
+<h3>👨‍💻 Core Devs</h3>
 
 - **[Bratic](https://guns.lol/braticishim)** – Creator/Owner
 - **[Midka](https://github.com/midaskira)** – Co-Owner/FFlags
 - **[Akhil](https://guns.lol/realakhil)** – FFlags
 - **[Luci](https://github.com/Luc6i)** – UI
+
+</details>
 
 ---
 
