@@ -119,7 +119,7 @@ Plexity is a fast, customizable Roblox bootstrapper built for full client-level 
 <h3>👨‍💻 Core Devs</h3>
 
 - **[Bratic](https://guns.lol/braticishim)** – Creator/Owner
-- **[Midka](https://github.com/midaskira)** – Co-Owner/FFlags
+- **[Midka](https://guns.lol/midaskira)** – Co-Owner/FFlags
 - **[Akhil](https://guns.lol/realakhil)** – FFlags
 - **[Luci](https://github.com/Luc6i)** – UI
 
