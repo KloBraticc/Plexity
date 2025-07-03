@@ -20,12 +20,8 @@ Plexity is a fast, customizable Roblox bootstrapper built for full client-level 
 <div align="center">
 
 [![Plexity Wiki](https://img.shields.io/badge/Plexity-Wiki-purple)](https://plexitywiki.netlify.app)
-  <a href="https://github.com/YOURUSERNAME/Plexity/releases">
-    <img src="https://img.shields.io/github/downloads/YOURUSERNAME/Plexity/total?color=00d8ff&label=Downloads" alt="Downloads">
-  </a>
-  <a href="https://github.com/YOURUSERNAME/Plexity/releases">
-    <img src="https://img.shields.io/github/v/release/YOURUSERNAME/Plexity?color=0a84ff&label=Latest" alt="Latest Release">
-  </a>
+[![Downloads](https://img.shields.io/github/downloads/KloBraticc/Plexity/total?color=2c2f7c&label=Downloads&logo=cloudsmith&logoColor=white)](https://github.com/KloBraticc/Plexity/releases)
+![Latest Release](https://img.shields.io/github/v/release/KloBraticc/Plexity)
 [![GitHub stars](https://img.shields.io/github/stars/KloBraticc/Plexity?style=social)](https://github.com/KloBraticc/Plexity/stargazers)
 [![Discord](https://img.shields.io/discord/1388222191937523762?label=Discord&color=5865F2&logo=discord&logoColor=white)](https://discord.gg/XmqFgxwAhd)
 
