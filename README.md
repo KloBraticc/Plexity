@@ -1,4 +1,4 @@
-# 🌌 Plexity: Best NONE Bloxstrap Fork
+<h1 img src="" width> Plexity: Best NONE Bloxstrap Fork</h1>
 
 Plexity is a fast, customizable Roblox bootstrapper built for full client-level control and powerful patching. Inspired by Bloxstrap, it's ideal for developers, power users, and tinkerers.
 
