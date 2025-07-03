@@ -92,6 +92,19 @@ Plexity is a fast, customizable Roblox bootstrapper built for full client-level 
 </details>
 
 <details>
+  <summary><h2>📘 Wiki</h2></summary>
+
+  <div align="center">
+    <h3>https://plexitywiki.netlify.app/</h3>
+  </div>
+
+---
+
+**The official wiki for Plexity. The Plexity Wiki is for everything related to Plexity — a minimal, no-bloat alternative to Bloxstrap. It provides help and issues/problems tailored for users who want full control without the clutter. Whether you're just getting started or fine-tuning every detail, this wiki is your go-to resource for all things Plexity.**
+
+</details>
+
+<details>
   <summary><h3>🤝 Community & Support</h3></summary>
 
 - 💬 **Join our Discord:** [Plexity Server](https://discord.gg/RrPVWUxZzA) for support, updates, and community chat.
