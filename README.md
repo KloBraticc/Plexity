@@ -43,7 +43,6 @@ Plexity is a fast, customizable Roblox bootstrapper built for full client-level 
 - ⚡ **Faster Boot Times** – Slim, optimized launcher core.
 - 🧩 **Patching System** – Inject custom logic into the client.
 - 🛡 **Safe & Non-Invasive** – Leaves your Roblox install untouched.
-- 🖥️ **CLI + GUI** – Choose the interface that fits your workflow.
 - 🧪 **Developer Tools** – Dev mode, verbose logs, patch logs, and more.
 - 🚫 **Update Control** – Skip forced updates when needed.
 - 🛠 **API Switcher** – Modify the API install branch on launch.
