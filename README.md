@@ -54,9 +54,15 @@ Plexity is a fast, customizable Roblox bootstrapper built for full client-level 
 
 <h3>🔌 Integrations</h3>
 
+- **HomePage** – Install Mods with only 1 click and Launch.
+- **Full Bloxshade Support (WIP)** – Use the Work in Progress Bloxshade our team works on daily.
+- **Sound Customization** – Use the Different Roblox Sounds.
+- **Custom Cursor** – Use your own Custom Cursor For Roblox.
 - **Display Resolution** – Change your display resolution, use stretch res, and more.
 - **Plugins** – Install or create your own plugins to enhance Plexity/Roblox.
 - **Multi-Instance Support** – Open multiple Roblox clients with ease.
+- **Disable RobloxCrashHandler** – Disables RobloxCrashHandler a Process that runs in the background with Roblox.
+- **Disable AutoUpdates** – Prevent Roblox from Updating to new versions.
 - **Log Generator** – Export logs for debugging or support.
 - **Keep Plexity Open** – Option to prevent Plexity from closing when Roblox launches.
 - **Advanced Debug** – View detailed debug logs while using the launcher.
@@ -79,6 +85,7 @@ Plexity is a fast, customizable Roblox bootstrapper built for full client-level 
 
 - **API Selection** – Choose which API Plexity uses to install Roblox.
 - **Pane UI Customization** – Customize the layout of the user interface.
+- **Run as Admin** – Launch Roblox as Admin.
 - **Launch Delay** – Control when Roblox starts after Plexity launches.
 - **Roblox Priority** – Adjust Roblox process priority to reduce performance bottlenecks.
 
