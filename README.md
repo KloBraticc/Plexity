@@ -30,7 +30,7 @@ Plexity is the fastest Roblox bootstrapper, designed to be the most lightweight 
 
 ## 📥 Installation Guide
 
-1. **Download:** Head to the [Releases page](https://github.com//Plexity/releases).
+1. **Download:** Head to the [Releases page](https://github.com/KloBraticc/Plexity/releases).
 2. **Extract or Install:** the ZIP/FOLDER then in the folder look for Plexity.exe and run it!.
 3. **Launch:** Plexity will handle the rest.
 
