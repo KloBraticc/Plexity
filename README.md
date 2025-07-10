@@ -20,7 +20,6 @@ Plexity is the fastest Roblox bootstrapper, designed to be the most lightweight 
 <div align="center">
 
 [![Plexity Wiki](https://img.shields.io/badge/Plexity-Wiki-purple)](https://plexitywiki.netlify.app)
-[![Downloads](https://img.shields.io/github/downloads/KloBraticc/Plexity/total?color=2c2f7c&label=Downloads&logo=cloudsmith&logoColor=white)](https://github.com/KloBraticc/Plexity/releases)
 ![Latest Release](https://img.shields.io/github/release/KloBraticc/Plexity.svg)
 [![GitHub stars](https://img.shields.io/github/stars/KloBraticc/Plexity?style=social)](https://github.com/KloBraticc/Plexity/stargazers)
 [![Discord](https://img.shields.io/discord/1388222191937523762?label=Discord&color=5865F2&logo=discord&logoColor=white)](https://discord.gg/XmqFgxwAhd)
