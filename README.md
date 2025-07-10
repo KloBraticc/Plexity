@@ -2,7 +2,7 @@
   <img src="https://github.com/KloBraticc/Plexity/blob/main/Images/plexityv2.png" width="35" height="35"> Plexity: Best NONE Bloxstrap Fork
 </h1>
 
-Plexity is a fast, customizable Roblox bootstrapper built for full client-level control and powerful patching. Inspired by Bloxstrap, it's ideal for developers, power users, and tinkerers.
+Plexity is the fastest Roblox bootstrapper, designed to be the most lightweight and stable.
 
 <p align="center">
   <img src="https://github.com/KloBraticc/PlexityWeb/blob/main/assets/Icon.png" alt="Plexity Logo" height="200">
