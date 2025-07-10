@@ -100,7 +100,7 @@ Plexity is a fast, customizable Roblox bootstrapper built for full client-level 
 
 ---
 
-**The official wiki for Plexity. The Plexity Wiki is for everything related to Plexity — a minimal, no-bloat alternative to Bloxstrap. It provides help and issues/problems tailored for users who want full control without the clutter. Whether you're just getting started or fine-tuning every detail, this wiki is your go-to resource for all things Plexity.**
+**The official wiki for Plexity. The Plexity Wiki is for everything related to Plexity a minimal, no-bloat alternative to Bloxstrap. It provides help and issues/problems tailored for users who want full control without the clutter. Whether you're just getting started or fine-tuning every detail, this wiki is your go-to resource for all things Plexity.**
 
 </details>
 
