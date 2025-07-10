@@ -32,8 +32,8 @@ Plexity is a fast, customizable Roblox bootstrapper built for full client-level 
 ## 📥 Installation Guide
 
 1. **Download:** Head to the [Releases page](https://github.com//Plexity/releases).
-2. **Extract or Install:** Run `bootstrap.ps1` or use the installer.
-3. **Launch:** Plexity will handle the rest — enjoy the ride.
+2. **Extract or Install:** the ZIP/FOLDER then in the folder look for Plexity.exe and run it!.
+3. **Launch:** Plexity will handle the rest.
 
 ---
 
