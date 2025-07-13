@@ -1,11 +1,11 @@
-<h1>
-  <img src="https://github.com/KloBraticc/Plexity/blob/main/Images/plexityv2.png" width="35" height="35"> Plexity: Best NONE Bloxstrap Fork
+<h1 align="center">
+  <img src="https://github.com/KloBraticc/Plexity/blob/main/Images/plexityv2.png" width="35" height="35"> Plexity
 </h1>
 
-Plexity is the fastest Roblox bootstrapper, designed to be the most lightweight and stable.
+Plexity is the best NON bloxstrap fork that is designed to be the most lightweight, fast, performance, and stable.
 
 <p align="center">
-  <img src="https://github.com/KloBraticc/PlexityWeb/blob/main/assets/Icon.png" alt="Plexity Logo" height="200">
+  <img src="https://github.com/KloBraticc/Plexity/blob/main/Images/plexityv2.png" alt="Plexity Logo" height="200">
 </p>
 
 <p align="center"><strong>⭐ Like Plexity? Star the repo and support development!</strong></p>
@@ -125,7 +125,7 @@ Plexity is the fastest Roblox bootstrapper, designed to be the most lightweight 
 
 - **[Bratic](https://guns.lol/braticishim)** – Creator/Owner
 - **[Midka](https://guns.lol/midaskira)** – Co-Owner/FFlags
-- **[Akhil](https://guns.lol/realakhil)** – FFlags
+- **[Akhil](https://guns.lol/realakhil)** – FFlags/Github manager
 - **[Luci](https://github.com/Luc6i)** – UI
 
 </details>
