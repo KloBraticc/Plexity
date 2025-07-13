@@ -32,7 +32,9 @@ Plexity is the best NON bloxstrap fork that is designed to be the most lightweig
 
 ---
 
-## 📥 Installation Guide
+<h2>
+  <img src="https://github.com/KloBraticc/Plexity/blob/main/Images/emojis/IconSapphire.png" width="25"> Installation Guide
+</h2>
 
 1. **Download:** Head to the [Releases page](https://github.com/KloBraticc/Plexity/releases).
 2. **Extract or Install:** the ZIP/FOLDER then in the folder look for Plexity.exe and run it!.
@@ -53,7 +55,9 @@ Plexity is the best NON bloxstrap fork that is designed to be the most lightweig
 </details>
 
 <details>
-  <summary><h2>🧩 Features Breakdown</h2></summary>
+  <summary><h2>
+    <img src="https://github.com/KloBraticc/Plexity/blob/main/Images/emojis/IconSapphire.png" width="25"> Features Breakdown
+</h2></summary>
 
 <h3>🔌 Integrations</h3>
 
@@ -101,7 +105,9 @@ Plexity is the best NON bloxstrap fork that is designed to be the most lightweig
 </details>
 
 <details>
-  <summary><h2>📘 Wiki</h2></summary>
+  <summary><h2>
+    <img src="https://github.com/KloBraticc/Plexity/blob/main/Images/emojis/IconPinkStars.png" width="25"> Wiki
+</h2></summary>
 
   <div align="center">
     <h3>https://plexitywiki.netlify.app/</h3>
@@ -114,7 +120,9 @@ Plexity is the best NON bloxstrap fork that is designed to be the most lightweig
 </details>
 
 <details>
-  <summary><h3>🤝 Community & Support</h3></summary>
+  <summary><h2>
+    <img src="https://github.com/KloBraticc/Plexity/blob/main/Images/emojis/IconPinkStars.png" width="25"> Community & Support
+  </h2></summary>
 
 - 💬 **Join our Discord:** [Plexity Server](https://discord.gg/RrPVWUxZzA) for support, updates, and community chat.
 - 🐞 **Bug Reports:** Use the [Reports](https://plexity.netlify.app/#report-bug).
@@ -123,7 +131,9 @@ Plexity is the best NON bloxstrap fork that is designed to be the most lightweig
 </details>
 
 <details>
-  <summary><h2>🙌 Credits</h2></summary>
+  <summary><h2> 
+    <img src="https://github.com/KloBraticc/Plexity/blob/main/Images/emojis/IconPinkStars.png" width="25"> Credits
+</h2></summary>
 
 <h3>👨‍💻 Core Devs</h3>
 
@@ -136,4 +146,4 @@ Plexity is the best NON bloxstrap fork that is designed to be the most lightweig
 
 ---
 
-*Thanks for choosing **Plexity**. Enjoy smooth gameplay! 🚀*
+*Thanks for choosing **Plexity**. Enjoy smooth gameplay! <img src="https://github.com/KloBraticc/Plexity/blob/main/Images/emojis/IconPinkRocket.png" width="20">*
