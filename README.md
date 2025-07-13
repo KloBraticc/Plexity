@@ -15,7 +15,9 @@ Plexity is the best NON bloxstrap fork that is designed to be the most lightweig
 
 ---
 
-<h2>🚀 Quick Links</h2>
+<h2>
+  <img src="https://github.com/KloBraticc/Plexity/blob/main/Images/emojis/IconPinkRocket.png" width="25"> Quick Links
+</h2>
 
 <div align="center">
 
