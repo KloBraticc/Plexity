@@ -8,7 +8,9 @@ Plexity is the best NON bloxstrap fork that is designed to be the most lightweig
   <img src="https://github.com/KloBraticc/Plexity/blob/main/Images/plexityv2.png" alt="Plexity Logo" height="200">
 </p>
 
-<p align="center"><strong>⭐ Like Plexity? Star the repo and support development!</strong></p>
+<p align="center"><strong>
+  <img src="https://github.com/KloBraticc/Plexity/blob/main/Images/emojis/IconPinkStars.png" width="20"> Like Plexity? Star the repo and support development!
+</strong></p>
 
 > [!CAUTION]
 > The only official place to get Plexity is via this GitHub repository and the [Official Website](https://plexity.netlify.app). Avoid clones or unauthorized sites.
