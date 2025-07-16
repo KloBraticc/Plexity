@@ -2,7 +2,7 @@
   <img src="https://github.com/KloBraticc/Plexity/blob/main/Images/plexityv2.png" width="35" height="35"> Plexity
 </h1>
 
-Plexity is the best NONE bloxstrap fork that is designed to be the most lightweight, fast, performance, and stable.
+Plexity is the best non-Bloxstrap fork, designed to be the most lightweight, fast, performant, and stable bootstrapper.
 
 <p align="center">
   <img src="https://github.com/KloBraticc/Plexity/blob/main/Images/plexityv2.png" alt="Plexity Logo" height="200">
