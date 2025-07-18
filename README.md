@@ -25,6 +25,8 @@ Plexity is the best non-Bloxstrap fork, designed to be the most lightweight, fas
 
 [![Plexity Wiki](https://img.shields.io/badge/Plexity-Wiki-purple)](https://plexitywiki.netlify.app)
 ![Latest Release](https://img.shields.io/github/release/KloBraticc/Plexity.svg)
+[![Latest Release Downloads](https://img.shields.io/github/downloads/KloBraticc/Plexity/latest/total.svg)](https://github.com/KloBraticc/Plexity/releases/latest)
+[![All Releases Downloads](https://img.shields.io/github/downloads/KloBraticc/Plexity/total.svg)](https://github.com/KloBraticc/Plexity/releases)
 [![GitHub stars](https://img.shields.io/github/stars/KloBraticc/Plexity?style=social)](https://github.com/KloBraticc/Plexity/stargazers)
 [![Discord](https://img.shields.io/discord/1388222191937523762?label=Discord&color=5865F2&logo=discord&logoColor=white)](https://discord.gg/XmqFgxwAhd)
 
