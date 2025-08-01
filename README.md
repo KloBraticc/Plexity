@@ -32,14 +32,6 @@ Plexity is the best non-Bloxstrap fork, designed to be the most lightweight, fas
 
 </div>
 
----
-
-<h2>
-  <img src="https://github.com/KloBraticc/Plexity/blob/main/Images/emojis/IconSapphire.png" width="25"> Installation Guide
-</h2>
-
----
-
 <details>
   <summary><h2><img src="https://github.com/KloBraticc/Plexity/blob/main/Images/emojis/IconPinkStars.png" width="30"> Why Use Plexity?</h2></summary>
 
