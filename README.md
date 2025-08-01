@@ -38,10 +38,6 @@ Plexity is the best non-Bloxstrap fork, designed to be the most lightweight, fas
   <img src="https://github.com/KloBraticc/Plexity/blob/main/Images/emojis/IconSapphire.png" width="25"> Installation Guide
 </h2>
 
-1. **Download:** Head to the [Releases page](https://github.com/KloBraticc/Plexity/releases).
-2. **Extract or Install:** the ZIP/FOLDER then in the folder look for Plexity.exe and run it!.
-3. **Launch:** Plexity will handle the rest.
-
 ---
 
 <details>
