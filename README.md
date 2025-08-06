@@ -51,6 +51,7 @@ Plexity is the best non-Bloxstrap fork, designed to be the most lightweight, fas
 
 <h3>🔌 Integrations</h3>
 
+- **Plexity RPC** – A custom Plexity RPC.
 - **HomePage** – Install Mods with only 1 click and Launch.
 - **Full Bloxshade Support (WIP)** – Use the Work in Progress Bloxshade our team works on daily.
 - **Sound Customization** – Use the Different Roblox Sounds.
@@ -59,10 +60,17 @@ Plexity is the best non-Bloxstrap fork, designed to be the most lightweight, fas
 - **Plugins** – Install or create your own plugins to enhance Plexity/Roblox.
 - **Multi-Instance Support** – Open multiple Roblox clients with ease.
 - **Disable RobloxCrashHandler** – Disables RobloxCrashHandler a Process that runs in the background with Roblox.
+- **Disable CPU 0** – Disables CPU-0 on Roblox.
+- **Limit CPU Affinity** – Limits the Amount of CPU Cores that Roblox uses so your GPU takes over.
+- **Launch with Roblox** – Launch Anything with Roblox.
 - **Disable AutoUpdates** – Prevent Roblox from Updating to new versions.
 - **Log Generator** – Export logs for debugging or support.
+- **Globle Roblox Settings** – Customize Globle Robloxs Settings.
 - **Keep Plexity Open** – Option to prevent Plexity from closing when Roblox launches.
 - **Advanced Debug** – View detailed debug logs while using the launcher.
+- **Reset Settings to Defualt** – Be able to reset plexitys Settings.
+- **Lists** – View Lists Posted by others and you can upload your own.
+- **Hub** – View CustomBackgrounds Posted by others and you can also upload your own.
 - **Tweaks Page** – Access over 50+ PC tweaks to optimize your system.
 - **CDN/Fallback Logic** – Automatically repairs broken updates.
 
@@ -75,6 +83,10 @@ Plexity is the best non-Bloxstrap fork, designed to be the most lightweight, fas
 - **Memory Optimizer** – Auto-optimizes Plexity during high memory usage.
 - **Config Snapshots** – Save and restore your full configuration.
 - **Games Page** – Launch Roblox Thro the games page.
+- **Index** – Checks if Vaild or Invaild.
+- **Date** – Shows Date ofc.
+- **Backups** – Create Fflag Backups.
+- **Auto Saving** – Plexity Auto Saves Settings every 60s can be disabled.
 - **Session Tracking** – Monitor when and how the client was launched.
 
 ---
