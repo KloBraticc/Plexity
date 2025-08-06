@@ -74,6 +74,7 @@ Plexity is the best non-Bloxstrap fork, designed to be the most lightweight, fas
 - **Memory Clean Mode** – Reduce RAM usage by cleaning temp logs.
 - **Memory Optimizer** – Auto-optimizes Plexity during high memory usage.
 - **Config Snapshots** – Save and restore your full configuration.
+- **Games Page** – Launch Roblox Thro the games page.
 - **Session Tracking** – Monitor when and how the client was launched.
 
 ---
@@ -89,9 +90,7 @@ Plexity is the best non-Bloxstrap fork, designed to be the most lightweight, fas
 ---
 
 <h3>🎨 UI & Theming</h3>
-
-*Coming soon or under development.*
-
+- **Custom Backgrounds** – Add Custom Backgrounds to use on Plexity Itself!
 </details>
 
 <details>
