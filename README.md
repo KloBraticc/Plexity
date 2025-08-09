@@ -13,7 +13,7 @@ Plexity is the best non-Bloxstrap fork, designed to be the most lightweight, fas
 </strong></p>
 
 > [!CAUTION]
-> The only official place to get Plexity is via this GitHub repository and the [Official Website](https://plexity.netlify.app). Avoid clones or unauthorized sites.
+> The only official place to get Plexity is via this GitHub repository and the [Official Website](https://discord.gg/rGdPF82Tmf). Avoid clones or unauthorized sites.
 
 ---
 
