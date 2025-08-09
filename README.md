@@ -103,6 +103,7 @@ Plexity is the best non-Bloxstrap fork, designed to be the most lightweight, fas
 
 <h3>🎨 UI & Theming</h3>
 - **Custom Backgrounds** – Add Custom Backgrounds to use on Plexity Itself!
+
 </details>
 
 <details>
@@ -125,8 +126,8 @@ Plexity is the best non-Bloxstrap fork, designed to be the most lightweight, fas
     <img src="https://github.com/KloBraticc/Plexity/blob/main/Images/emojis/IconPinkStars.png" width="25"> Community & Support
   </h2></summary>
 
-- 💬 **Join our Discord:** [Plexity Server](https://discord.gg/RrPVWUxZzA) for support, updates, and community chat.
-- 🐞 **Bug Reports:** Use the [Reports](https://plexity.netlify.app/#report-bug).
+- 💬 **Join our Discord:** [Plexity Server](https://discord.gg/rGdPF82Tmf) for support, updates, and community chat.
+- 🐞 **Bug Reports:** Use the [Reports](https://discord.gg/rGdPF82Tmf).
 - ⭐ **Star this repo:** Your support helps keep the project going.
 
 </details>
