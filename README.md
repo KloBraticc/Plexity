@@ -13,7 +13,7 @@ Plexity is the best non-Bloxstrap fork, designed to be the most lightweight, fas
 </strong></p>
 
 > [!CAUTION]
-> The only official place to get Plexity is via this GitHub repository and the [Official Website](https://discord.gg/rGdPF82Tmf). Avoid clones or unauthorized sites.
+> The only official place to get Plexity is via this GitHub repository and the [Official Website](https://plexity.netlify.app/). Avoid clones or unauthorized sites.
 
 ---
 
@@ -23,12 +23,12 @@ Plexity is the best non-Bloxstrap fork, designed to be the most lightweight, fas
 
 <div align="center">
 
-[![Plexity Wiki](https://img.shields.io/badge/Plexity-Wiki-purple)](https://discord.gg/rGdPF82Tmf)
+[![Plexity Wiki](https://img.shields.io/badge/Plexity-Wiki-purple)]([https://discord.gg/rGdPF82Tmf](https://plexitywiki.netlify.app/))
 ![Latest Release](https://img.shields.io/github/release/KloBraticc/Plexity.svg)
-[![Latest Release Downloads](https://img.shields.io/github/downloads/KloBraticc/Plexity/latest/total.svg)](https://discord.gg/rGdPF82Tmf)
-[![All Releases Downloads](https://img.shields.io/github/downloads/KloBraticc/Plexity/total.svg)](https://discord.gg/rGdPF82Tmf)
-[![GitHub stars](https://img.shields.io/github/stars/KloBraticc/Plexity?style=social)](https://discord.gg/rGdPF82Tmf)
-[![Discord](https://img.shields.io/discord/1388222191937523762?label=Discord&color=5865F2&logo=discord&logoColor=white)](https://discord.gg/rGdPF82Tmf)
+[![Latest Release Downloads](https://img.shields.io/github/downloads/KloBraticc/Plexity/latest/total.svg)](https://github.com/KloBraticc/Plexity/Releases)
+[![All Releases Downloads](https://img.shields.io/github/downloads/KloBraticc/Plexity/total.svg)](https://github.com/KloBraticc/Plexity/Releases)
+[![GitHub stars](https://img.shields.io/github/stars/KloBraticc/Plexity?style=social)]()
+[![Discord](https://img.shields.io/discord/1388222191937523762?label=Discord&color=5865F2&logo=discord&logoColor=white)](https://discord.gg/k9cUTnEs)
 
 </div>
 
@@ -126,8 +126,7 @@ Plexity is the best non-Bloxstrap fork, designed to be the most lightweight, fas
     <img src="https://github.com/KloBraticc/Plexity/blob/main/Images/emojis/IconPinkStars.png" width="25"> Community & Support
   </h2></summary>
 
-- 💬 **Join our Discord:** [Plexity Server](https://discord.gg/rGdPF82Tmf) for support, updates, and community chat.
-- 🐞 **Bug Reports:** Use the [Reports](https://discord.gg/rGdPF82Tmf).
+- 💬 **Join our Discord:** [Plexity Server](https://discord.gg/k9cUTnEs) for support, updates, and community chat.
 - ⭐ **Star this repo:** Your support helps keep the project going.
 
 </details>
