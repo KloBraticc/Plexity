@@ -102,6 +102,7 @@ Plexity is the best non-Bloxstrap fork, designed to be the most lightweight, fas
 ---
 
 <h3>🎨 UI & Theming</h3>
+
 - **Custom Backgrounds** – Add Custom Backgrounds to use on Plexity Itself!
 
 </details>
